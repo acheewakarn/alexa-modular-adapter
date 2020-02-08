@@ -8,7 +8,7 @@
 
 **Github:** github.com/acheewakarn/amazon-enabled-accessibility
 
-**Revision:** [Revision #] on [Date]
+**Revision:** [Revision #] on [DATE]
 
 ---
 
