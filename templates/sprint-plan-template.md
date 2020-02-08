@@ -52,4 +52,4 @@
 |Day|Time|TA|
 |------|------|------|
 |Monday/Wednesday/Friday|1:30-2:30PM|No|
-|Tuesday|3:20-4:05|Yes|
+|Tuesday|3:20-4:05PM|Yes|
