@@ -41,13 +41,15 @@
 ||**0**|**Sprint 7 (Start: 05/18/20, End: 06/07/20)**|
 |||As a user, I want to be able to turn on/off my fan just by asking the fan that has alexa, because I would not need to go across the room to turn it on.|
 |||As a user, I want to be able to switch my fan to spinning modes user by saying “mode 1” or “faster”/”slower”, because it would allow me to adjust the sound/power of the fan without crossing the room.|
-
 ||**Total Points: [#]**|**Story Count: [#]**|
 
 ## Product Backlog
 |Priority Level|Story Points|User Story|
 |------|------|------|
 ||**[# points]**| |
-
+|||Adaptive NERF( GUN|
+|||Speaker|
+|||Switch Heater|
+|||Adaptive Lava Lamp|
 
 
