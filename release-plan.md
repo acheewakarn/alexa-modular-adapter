@@ -38,7 +38,7 @@
 |2|5|As a user, I want to connect my fan to wi-fi, so my fan can use the Alexa Skills Kit (ASK).|
 |2|5|As a user, I want to be able to turn on/off my fan just by using voice commands, so it is more accessible|
 ||**5**|**Sprint 7 (Start: 05/25/20, End: 06/07/20)**|
-|2|5|As a user, I want to be able to switch my fan to different modes by saying “mode 1” or “faster”/”slower”, because it would allow me to adjust the sound/power without crossing the room.|
+|2|5|As a user, I want to be able to switch my fan to different modes by saying “mode 1” or “faster”/”slower”, because it would allow me to adjust the sound/power of the fan without having to use any switch controls.|
 ||**Total Points: 83**|**Story Count: 13**|
 
 ## Product Backlog
