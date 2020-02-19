@@ -18,8 +18,7 @@
 
 ### Amazon Liaison
 David Frerichs (dfrerich@amazon.com)
->Principal Solutions Engineer
->*Amazon Alexa*
+>Principal Solutions Engineer, *Amazon Alexa*
 
 ### Professor
 Richard Jullig (rjullig@ucsc.edu)
