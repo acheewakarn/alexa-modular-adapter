@@ -11,38 +11,25 @@
 ## Personnel
 ### Team Members
 Anon Cheewakarn (acheewak@ucsc.edu)
-
 Bryan Jimenez (bjimene6@ucsc.edu)
-
 Cagan Bakirci (cbakirci@ucsc.edu)
-
 Chris Gunter (cgunter@ucsc.edu)
-
 Kenneth Mai (kcmai@ucsc.edu)
-
 
 ### Amazon Liaison
 David Frerichs (dfrerich@amazon.com)
-
 Principal Solutions Engineer
-
 *Amazon Alexa*
-
 
 ### Professor
 Richard Jullig (rjullig@ucsc.edu)
 
-
 ### Teaching Assistant
 Arindam Sarma (asarma@ucsc.edu)
-
-
----
 
 ## High Level Goals:
 * We want to set up a product that can act as an abstract device between a product’s switch interface and client’s Alexa voice interaction. 
 * We want to scale up our prototype to be used in more complex devices such as a motorized table.
-
 
 ### Selected Products
   * [Baby Einstein Take Along Tunes Musical Switch Toy](https://www.adaptivetechsolutions.com/pd-baby-einstein-musical-switch-adapted-toy.cfm)
@@ -50,9 +37,7 @@ Arindam Sarma (asarma@ucsc.edu)
   * [Switch Adapted Fan](https://www.adaptivetechsolutions.com/o2cool-switch-adapted-fan/)
   * [Electric Adjustable Standing Desk](https://www.amazon.com/Adjustable-Ergonomic-Motorized-Commercial-Programmable/dp/B072XCVYVX)
   
-Other products can be found in the Product Backlogs section below.
-
-
+Additional products can be found in the Product Backlogs section below.
 
 ## User Stories
 |Priority Level|Story Points|User Story|
