@@ -1,8 +1,8 @@
-# Sprint [NUMBER] Plan
+# Sprint 1 Plan
 
 ***[Product Name]*** by  ***Alexa-Enabled Accessibility Team 1***
 
-**Sprint Completion Date:** [February 18 2020]
+**Sprint Completion Date:** [March 1 2020]
 
 **Github:** github.com/acheewakarn/amazon-enabled-accessibility
 
@@ -25,12 +25,11 @@
   
   Total Hours for User Story: ~11 Hours
   
--As a user, I want to set up my musical toy to wifi using alexa, so my toy can use the Alexa Skills 
- Kit (ASK).
+- As a user, I want to set up my musical toy to wifi using alexa, so my toy can use the Alexa Skills Kit (ASK).
   - Task 1: Figure out how to control input to the toy. (~3 Hours)
   - Task 2: Set up framework for Alexa skills on the cloud. (~2 Hours)
-  
-  Total Hours for User Story: ~11 Hours
+
+  Total Hours for User Story: ~5 Hours
   
 ## Initial Task Assignment
 
