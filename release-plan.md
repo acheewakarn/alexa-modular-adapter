@@ -23,7 +23,7 @@
 |5|3|As a user, I want to set up wi-fi through voice so installation is simpler.
 |4|5|As a user, I want to set up my musical toy to wifi using alexa, so my toy can use the Alexa Skills Kit (ASK). |
 ||**21**|**Sprint 2 (Start: 03/02/20 End: 03/15/20)**|
-|3|13|As a user, I want to be able to turn on/off my musical toy just by asking Alexa, I can play the toy despite my disability
+|3|13|As a user, I want to be able to turn on/off my musical toy just by asking Alexa, I can play the toy despite my disability.
 |1|8|As a user, I want to be able to switch my musical toy to play one of the classical melodies so I can change the song despite my disability.|
 ||**10**|**Sprint 3 (Start: 03/16/20, End: 04/5/20)**|
 |2|5|As a user, I want to set up my buzz lightyear toy to wi-fi using alexa, so my toy can use the Alexa Skills Kit (ASK).|
@@ -36,7 +36,7 @@
 |1|8|As a user, I want to set my desk to a specific preset height by saying “raise/lower my desk to mode x” to Alexa, so I can use the memory feature and adjust the desk to a frequently used height.|
 ||**10**|**Sprint 6 (Start: 05/11/20, End: 05/24/20)**|
 |2|5|As a user, I want to connect my fan to wi-fi, so my fan can use the Alexa Skills Kit (ASK).|
-|2|5|As a user, I want to be able to turn on/off my fan just by using voice commands, so it is more accessible|
+|2|5|As a user, I want to be able to turn on/off my fan just by using voice commands, so it is more accessible.|
 ||**5**|**Sprint 7 (Start: 05/25/20, End: 06/07/20)**|
 |2|5|As a user, I want to be able to switch my fan to different modes by saying “mode 1” or “faster”/”slower”, because it would allow me to adjust the sound/power of the fan without having to use any switch controls.|
 ||**Total Points: 83**|**Story Count: 13**|
