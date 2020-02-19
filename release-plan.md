@@ -1,6 +1,14 @@
 # Release Plan
 **Accessibility Modular Adapter** by  **UCSC Alexa-Enabled Accessibility Team 1**
 
+**Release:** **1.0.0** on **June 10, 2020**
+
+**Github:** github.com/acheewakarn/alexa-enabled-accessibility
+
+**Revision:** #1 on February 18, 2020
+
+
+## Personnel
 ### Team Members
 Anon Cheewakarn (acheewak@ucsc.edu)
 
@@ -28,12 +36,6 @@ Richard Jullig (rjullig@ucsc.edu)
 ### Teaching Assistant
 Arindam Sarma (asarma@ucsc.edu)
 
-
-**Release:** **1.0.0** on **June 10, 2020**
-
-**Github:** github.com/acheewakarn/alexa-enabled-accessibility
-
-**Revision:** #1 on February 18, 2020
 
 ---
 
