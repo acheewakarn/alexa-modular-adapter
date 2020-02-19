@@ -10,15 +10,17 @@
 
 ## Personnel
 ### Team Members
-Anon Cheewakarn (acheewak@ucsc.edu)
-Bryan Jimenez (bjimene6@ucsc.edu)
-Cagan Bakirci (cbakirci@ucsc.edu)
-Chris Gunter (cgunter@ucsc.edu)
-Kenneth Mai (kcmai@ucsc.edu)
+1. Anon Cheewakarn (acheewak@ucsc.edu)
+2. Bryan Jimenez (bjimene6@ucsc.edu)
+3. Cagan Bakirci (cbakirci@ucsc.edu)
+4. Chris Gunter (cgunter@ucsc.edu)
+5. Kenneth Mai (kcmai@ucsc.edu)
 
 ### Amazon Liaison
 David Frerichs (dfrerich@amazon.com)
+
 Principal Solutions Engineer
+
 *Amazon Alexa*
 
 ### Professor
