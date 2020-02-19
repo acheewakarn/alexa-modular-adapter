@@ -1,10 +1,10 @@
 # Release Plan Template
 
-***Modular Adapter*** by  ***Alexa-Enabled Accessibility Team 1***
+***Accessibility Modular Adapter*** by  ***Alexa-Enabled Accessibility Team 1***
 
 **Team Members:** Anon Cheewakarn, Bryan Jimenez, Cagan Bakirci, Chris Gunter, Kenneth Mai
 
-**Release:** **1.0.0** on **[Date]**
+**Release:** **1.0.0** on **June 5, 2020**
 
 **Github:** github.com/acheewakarn/amazon-enabled-accessibility
 
@@ -19,12 +19,12 @@
 ## User Stories
 |Priority Level|Story Points|User Story|
 |------|------|------|
-||**13**|**Sprint 1**|
-|5|[3]|As a user, I want to set up wi-fi through voice so installation is simpler.|
-|4|[5]|As a user, I want to set up my musical toy to the wifi using alexa, so my toy can use the Alexa Skills Kit (ASK). |
-|3|[13]|As a user, I want to be able to turn on/off my musical toy just by asking the toy that has alexa, because I would not need to go across the room to turn it on.|
-|1|[8]|As a user, I want to be able to switch my musical toy to play one of the classical melodies because I would because I would not need to go across the room to switch the song.|
-||**13**|**Sprint 2**|
+||**13**|**Sprint 1 (Start: End:)**|
+|5|3|As a user, I want to set up wi-fi through voice so installation is simpler.|
+|4|5|As a user, I want to set up my musical toy to the wifi using alexa, so my toy can use the Alexa Skills Kit (ASK). |
+|3|13|As a user, I want to be able to turn on/off my musical toy just by asking the toy that has alexa, because I would not need to go across the room to turn it on.|
+|1|8|As a user, I want to be able to switch my musical toy to play one of the classical melodies because I would because I would not need to go across the room to switch the song.|
+||**13**|**Sprint 2 (Start: End:)**|
 |5|3|As a user, I want to set up my motorized desk with the modular adapter, so I can control it with Alexa voice command.|
 |4|5|As a user, I want to be able to lower my motorized desk using voice commands such as “lower by 2 inches”, so I can adjust the desk if to my height if I am unable to use the press controls for the desk height adjustment.|
 |3|13|As a user, I want to be able to raise my motorized desk using voice commands to the alexa such as “raise by 2 inches”, so I can remove the desk from my area.|
@@ -32,7 +32,6 @@
 ||**Total Points: [#]**|**Story Count: [#]**|
 
 ## Product Backlog
-## User Stories
 |Priority Level|Story Points|User Story|
 |------|------|------|
 ||**[# points]**|Fan|
