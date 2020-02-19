@@ -12,11 +12,12 @@
 
 
 ## List of Equipments
-|Quantity|Cost Per Unit|Product|Reason|Priority Level|Retailer|
+
+|Quantity|Cost Per Unit|Product|Reason|Priority|Retailer|
 |------|------|------|------|------|------|
 |3|$89.99 each; $269.97 for 3|CanaKit Raspberry Pi 4 Starter Kit - 2GB RAM|These are the micro-computer boards that we want to use to build the abstract bridge between the Alexa voice commands and the switch controlled devices. The kits include the necessary 32GB SD card and power supply for the RPI.|High|[Amazon](https://www.amazon.com/dp/B07V2B4W63)|
 |3|$6.99 each; $20.97 for 3|SunFounder USB 2.0 Mini Microphone for Raspberry Pi 4 Model B|These are the USBs that are going to be plugged into the Raspberry PIs so the RPI can receive audio as input. This is so we can use the Alexa Voice Service on the Raspberry Pi 4 by using vocal commands.|High|Amazon|
 |1|$34.97|Adaptive Music Button Toy|This a toy object that plays different tunes depending on what buttons are pushed on the device. The toy plays a variety of sounds and songs. We are going to connect the hardware of the toy to our raspberry pi, so vocal commands from the Alexa on the RPI  can make the toy play different tunes.|High|Adaptive Tech Solutions|
 |1|$249.99|Motorized Height Adjustable Standing Desk Frame|This is a motorized desk frame that can adjust its height from using up and down buttons on the frame itself. The frame can also save up to 4 different heights to automatically adjust to at the press of a button. Our use for this product is to create a connection between the vocal commands of the Alexa and the function of the product itself. The sponsor allowed us to use a stand-up table as opposed to an over-bed table as the prototype for this project. We decided to use this product, because it is motorized and has different functionalities for more commands.|High|Amazon|
 |1|$49.98|Adaptive Toy Model|This is an action figure of popular character Buzz Lightyear. By pressing a button, Buzz Lightyear will do some animation of walking around and saying some catchphrases. We want to use this toy as another product to adapt to our RPI, while waiting for the arrive of the Motorized Desk Frame.|Medium|Adaptive Tech Solutions|
-|1||Adaptive Fan||Low|Adaptiive Tech Solutions|
+|1|$...|Adaptive Fan||Low|Adaptiive Tech Solutions|
