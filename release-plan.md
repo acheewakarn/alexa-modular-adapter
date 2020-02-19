@@ -8,7 +8,7 @@
 
 **Github:** github.com/acheewakarn/amazon-enabled-accessibility
 
-**Revision:** [Revision #] on [DATE]
+**Revision:** 1] on February 18, 2020
 
 ---
 
@@ -19,37 +19,33 @@
 ## User Stories
 |Priority Level|Story Points|User Story|
 |------|------|------|
-||**0**|**Sprint 1 (Start: 02/18/20, End: 03/01/20)**|
+||**8**|**Sprint 1 (Start: 02/18/20, End: 03/01/20)**|
 |5|3|As a user, I want to set up wi-fi through voice so installation is simpler.
-||**29**|**Sprint 2 (Start: 03/02/20 End: 03/15/20)**|
 |4|5|As a user, I want to set up my musical toy to the wifi using alexa, so my toy can use the Alexa Skills Kit (ASK). |
-|3|13|As a user, I want to be able to turn on/off my musical toy just by asking the toy that has alexa, because I would not need to go across the room to turn it on.|
-|1|8|As a user, I want to be able to switch my musical toy to play one of the classical melodies because I would because I would not need to go across the room to switch the song.|
-||**0**|**Sprint 3 (Start: 03/16/20, End: 04/5/20)**|
-|0|0|As a ... ANOTHER TOY|
-|0|0|As a ... ANOTHER TOY|
-|0|0|As a ... ANOTHER TOY|
-||**0**|**Sprint 4 (Start: 04/06/20, End: 04/19/20)**|
+||**21**|**Sprint 2 (Start: 03/02/20 End: 03/15/20)**|
+|3|13|As a user, I want to be able to turn on/off my musical toy just by asking the toy that has alexa, I can play the toy despise my disability
+|1|8|As a user, I want to be able to switch my musical toy to play one of the classical melodies because I can change the song despise my disability.|
+||**10**|**Sprint 3 (Start: 03/16/20, End: 04/5/20)**|
+|2|5|As a user, I want to set up my buzz lightyear toy to the wifi using alexa, so my toy can use the Alexa Skills Kit (ASK).|
+|2|5|As a user, I want to be able to control my buzz lightyear toy just by asking the toy that has alexa, so I can interact with the toy despise my disability.|
+||**8**|**Sprint 4 (Start: 04/06/20, End: 04/26/20)**|
 |5|3|As a user, I want to set up my motorized desk with the modular adapter, so I can control it with Alexa voice command.|
 |4|5|As a user, I want to be able to lower my motorized desk using voice commands such as “lower by 2 inches”, so I can adjust the desk if to my height if I am unable to use the press controls for the desk height adjustment.|
-||**0**|**Sprint 5 (Start: 04/20/20, End: 05/03/20)**|
+||**21**|**Sprint 5 (Start: 04/27/20, End: 05/10/20)**|
 |3|13|As a user, I want to be able to raise my motorized desk using voice commands to the alexa such as “raise by 2 inches”, so I can remove the desk from my area.|
 |1|8|As a user, I want to set my desk to a specific preset height by saying “Raise/Lower my desk to mode x” to Alexa, so I can use the memory feature and adjust the desk to a frequently used height.|
-||**0**|**Sprint 6 (Start: 05/04/20, End: 05/17/20)**|
-|||As a user, I want to control a small fan that uses switch controls through voice so it is easier to use.|
-|||As a user, I want to set up my fan to the wifi using alexa, so my fan can use the Alexa Skills Kit (ASK).|
-||**0**|**Sprint 7 (Start: 05/18/20, End: 06/07/20)**|
-|||As a user, I want to be able to turn on/off my fan just by asking the fan that has alexa, because I would not need to go across the room to turn it on.|
-|||As a user, I want to be able to switch my fan to spinning modes user by saying “mode 1” or “faster”/”slower”, because it would allow me to adjust the sound/power of the fan without crossing the room.|
-||**Total Points: [#]**|**Story Count: [#]**|
+||**13**|**Sprint 6 (Start: 05/11/20, End: 05/24/20)**|
+|2|8|As a user, I want to control a adaptive fan that through voice so it is easier to use.|
+|2|5|As a user, I want to set up my fan to the wifi using alexa, so my fan can use the Alexa Skills Kit (ASK).|
+||**10**|**Sprint 7 (Start: 05/25/20, End: 06/07/20)**|
+|2|5|As a user, I want to be able to turn on/off my fan just by asking the fan that has alexa, because I would not need to go across the room to turn it on.|
+|2|5|As a user, I want to be able to switch my fan to spinning modes user by saying “mode 1” or “faster”/”slower”, because it would allow me to adjust the sound/power of the fan without crossing the room.|
+||**Total Points: 91**|**Story Count: 14**|
 
 ## Product Backlog
-|Priority Level|Story Points|User Story|
-|------|------|------|
-||**[# points]**| |
-|||Adaptive NERF( GUN|
-|||Speaker|
-|||Switch Heater|
-|||Adaptive Lava Lamp|
-
-
+|Product|
+|------|
+|Adaptive NERF GUN|
+|Speaker|
+|Switch Heater|
+|Adaptive Lava Lamp|
