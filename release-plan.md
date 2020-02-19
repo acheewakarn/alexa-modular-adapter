@@ -2,22 +2,36 @@
 **Accessibility Modular Adapter** by  **UCSC Alexa-Enabled Accessibility Team 1**
 
 ### Team Members
+
 **Anon Cheewakarn** (acheewak@ucsc.edu)
+
 **Bryan Jimenez** (bjimene6@ucsc.edu)
+
 **Cagan Bakirci** (cbakirci@ucsc.edu)
+
 **Chris Gunter** (cgunter@ucsc.edu)
+
 **Kenneth Mai** (kcmai@ucsc.edu)
 
+
 ### Amazon Liaison
+
 **David Frerichs** (dfrerich@amazon.com)
+
 Principal Solutions Engineer
+
 *Amazon Alexa*
 
+
 ### Teaching Assistant
+
 **Arindam Sarma** (asarma@ucsc.edu)
 
+
 **Release:** **1.0.0** on **June 10, 2020**
+
 **Github:** github.com/acheewakarn/alexa-enabled-accessibility
+
 **Revision:** #1 on February 18, 2020
 
 ---
