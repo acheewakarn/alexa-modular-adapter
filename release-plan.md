@@ -8,7 +8,7 @@
 
 **Github:** github.com/acheewakarn/amazon-enabled-accessibility
 
-**Revision:** 1] on February 18, 2020
+**Revision:** 1 on February 18, 2020
 
 ---
 
