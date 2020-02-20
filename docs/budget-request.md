@@ -13,7 +13,7 @@
 
 ## List of Equipments
 
-|Quantity|Cost Per Unit|Product|Reason|Priority|Retailer|
+|Quantity|Cost|Product|Reason|Priority|Retailer|
 |------|------|------|------|------|------|
 |3|$89.99 each; $269.97 for 3|CanaKit Raspberry Pi 4 Starter Kit - 2GB RAM|These are the micro-computer boards that we want to use to build the abstract bridge between the Alexa voice commands and the switch controlled devices. The kits include the necessary 32GB SD card and power supply for the RPI.|High|[Amazon](https://www.amazon.com/dp/B07V2B4W63)|
 |3|$6.99 each; $20.97 for 3|SunFounder USB 2.0 Mini Microphone for Raspberry Pi 4 Model B|These are the USBs that are going to be plugged into the Raspberry PIs so the RPI can receive audio as input. This is so we can use the Alexa Voice Service on the Raspberry Pi 4 by using vocal commands.|High|[Amazon](https://www.amazon.com/SunFounder-Microphone-Raspberry-Recognition-Software/dp/B01KLRBHGM)|
