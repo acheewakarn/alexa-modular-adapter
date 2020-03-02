@@ -1,4 +1,4 @@
-# Sprint [1] Report
+# Sprint 1 Report
 
 ***[Product Name]*** by  ***Alexa-Enabled Accessibility Team 1***
 
@@ -13,8 +13,6 @@
 
 ## Actions to stop doing
 
-- ...
-- ...
 - ...
 
 ## Actions to start doing
