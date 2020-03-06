@@ -44,24 +44,24 @@ Additional products can be found in the Product Backlogs section below.
 |-|**~~3~~**|**Sprint 1 (Start: 02/18/20, End: 03/01/20)**|
 |~~5~~|~~3~~|~~As a user, I want to set up wi-fi using voice to ease up the setup process of my retrofitted products.~~
 |-|**21**|**Sprint 2 (Start: 03/02/20 End: 03/15/20)**|
-|5|8|As a user, I want to set up a mock device with an AVS integrated RPi so I can control it via Voice Commands.|
-|5|5|As a user, I want to be able to utilize the Alexa Home Skills to raise/lower some levels of mock device so I adjust the mock device.|
-|5|8|As a user, I want to set up my motorized desk with an AVS integrated RPi, so I can control it with Voice Commands.|
+|5|8|As a user, I want to set up a mock device with an AVS integrated RPi so I can control it via voice commands.|
+|5|5|As a user, I want to be able to adjust the mode of my Alexa-Enabled Mock Device using voice commands, so I can control its connected device.|
+|5|8|As a user, I want to set up my motorized desk with an AVS integrated RPi, so I can control it with voice commands.|
 |-|**18**|**Sprint 3 (Start: 03/16/20, End: 04/5/20)**|
-|3|13|As a user, I want to be able to raise my motorized desk using Voice Commands such as “raise by 2 inches”, so I can adjust the desk to a level I desire.|
-|4|5|As a user, I want to be able to lower my motorized desk using Voice Commands such as “lower by 2 inches”, so I can adjust the desk to a level I desire.|
+|3|13|As a user, I want to be able to raise my motorized desk using voice commands such as “raise by 2 inches”, so I can adjust the desk to an optimal level.|
+|4|5|As a user, I want to be able to lower my motorized desk using voice commands such as “lower by 2 inches”, so I can adjust the desk to an optimal level.|
 |-|**13**|**Sprint 4 (Start: 04/06/20, End: 04/26/20)**|
-|1|8|As a user, I want to set my desk to a specific preset height by saying “raise/lower my desk to mode x” to Alexa, so I can use the memory feature and adjust the desk to a frequently used height using Voice Commands.|
-|4|5|As a user, I want to set up my musical toy with an Alexa Home Skills integrated RPi, so my toy can be controlled with Voice Commands.|
+|1|8|As a user, I want to set my desk to a specific preset height by saying “raise/lower my desk to mode x” to Alexa, so I can use the memory feature.|
+|4|5|As a user, I want to set up my Adapted Musical Toy with an Alexa Home Skills integrated RPi, so my toy can be controlled with voice commands.|
 |-|**21**|**Sprint 5 (Start: 04/27/20, End: 05/10/20)**|
-|3|13|As a user, I want to be able to toggle my Adapted Musical Toy on/off using Voice Commands so I can control it despite my disability.
-|2|8|As a user, I want to be able to switch modes on my Alexa-Enabled Musical Toy so I can change the music using Voice Commands.|
+|3|13|As a user, I want to be able to toggle my Adapted Musical Toy on/off using voice commands so I can control it despite my disability.
+|2|8|As a user, I want to be able to switch modes on my Alexa-Enabled Musical Toy so I can change the music using voice commands.|
 |-|**15**|**Sprint 6 (Start: 05/11/20, End: 05/24/20)**|
-|2|5|As a user, I want to set up my Buzz Lightyear toy to AVS integrated Pi, so my toy can be operated using with Voice Commands.|
-|2|5|As a user, I want to set up my Adapted Fan to an AVS integrated RPi, so I can operate it with Voice Commands.|
-|2|5|As a user, I want to be able to toggle my Alexa-Enabled Adapted Fan on/off using Voice Commands, so it is more accessible.|
+|2|5|As a user, I want to set up my Buzz Lightyear toy to an AVS integrated Pi, so my toy can be operated using with voice commands.|
+|2|5|As a user, I want to set up my Adapted Fan to an AVS integrated RPi, so I can operate it with voice commands.|
+|2|5|As a user, I want to be able to toggle my Alexa-Enabled Adapted Fan on/off using voice commands, so it is more accessible.|
 |-|**5+**|**Sprint 7 (Start: 05/25/20, End: 06/07/20)**|
-|2|5|As a user, I want to adjust the level of my Alexa-Enabled Fan using Voice Commands, so I adjust it to a desired fan speed.|
+|2|5|As a user, I want to adjust the level of my Alexa-Enabled Fan using voice commands, so I adjust it to a desired fan speed.|
 |?|?| Backlog|
 |-|**Total Points: 93+**|**Story Count: 13**|
 
