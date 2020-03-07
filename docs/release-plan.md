@@ -31,10 +31,12 @@ Arindam Sarma (asarma@ucsc.edu)
 * We want to scale up our prototype to be used in more complex devices such as a motorized table.
 
 ### Selected Products
-  * [Baby Einstein Take Along Tunes Musical Switch Toy](https://www.adaptivetechsolutions.com/pd-baby-einstein-musical-switch-adapted-toy.cfm)
-  * [Buzz Lightyear Walking Switch Adapted](https://www.adaptivetechsolutions.com/buzz-lightyear-walking-switch-adapted/)
-  * [Switch Adapted Fan](https://www.adaptivetechsolutions.com/o2cool-switch-adapted-fan/)
-  * [Electric Adjustable Standing Desk](https://www.amazon.com/Adjustable-Ergonomic-Motorized-Commercial-Programmable/dp/B072XCVYVX)
+|Product|Link|
+|------|------|
+|Baby Einstein Take Along Tunes Musical Switch Toy|https://tinyurl.com/s5cb68o|
+|Buzz Lightyear Walking Switch Adapted|https://tinyurl.com/uyrcgsc|
+|Switch Adapted Fan|https://tinyurl.com/tle9ex7|
+|Electric Adjustable Standing Desk|https://tinyurl.com/v72wv2l|
   
 Additional products can be found in the Product Backlogs section below.
 
@@ -66,9 +68,9 @@ Additional products can be found in the Product Backlogs section below.
 |-|**Total Points: 93+**|**Story Count: 13**|
 
 ## Product Backlog
-|Product|
-|------|
-|[Adaptive Nerf Dart Gun](https://www.adaptivetechsolutions.com/nerf-dart-gun-switch-adapted/)|
-|Speaker|
-|[Space Heater](https://www.amazon.com/Overheat-Protection-Tip-Over-Portable-Thermostat/dp/B084GQK5Q5?ref_=BSellerC&pf_rd_p=8c7e5b9e-3ad3-573c-bcb9-7b3e9ed657a3&pf_rd_s=merchandised-search-10&pf_rd_t=101&pf_rd_i=510182&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=3SHDGH4VW4ZCFVDCZP29&pf_rd_r=3SHDGH4VW4ZCFVDCZP29&pf_rd_p=8c7e5b9e-3ad3-573c-bcb9-7b3e9ed657a3)|
-|[Adaptive Lava Lamp](https://www.adaptivetechsolutions.com/tower-volcano-lamp/)|
+|Product|Link|
+|------|------|
+|Adaptive Nerf Dart Gun|https://tinyurl.com/vvento6|
+|Speaker|TBD|
+|Space Heater|https://tinyurl.com/s2yn35w|
+|Adaptive Lava Lamp|https://tinyurl.com/vfttzgk|
