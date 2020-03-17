@@ -32,5 +32,6 @@ Professor Richard Jullig (rjullig@ucsc.edu)
 |1|$0.75| Through-Hole Resistors - 10k ohm 5% 1/4W - Pack of 25| To be used for prototyping| [Ada Fruit](https://www.adafruit.com/product/2784)|
 |1|$2.50| Tactile Switch Buttons (12mm square, 6mm tall) x 10 pack|To be used for prototyping|[Ada Fruit](https://www.adafruit.com/product/1119)|
 |4|$2.95 each; $11.75 for 4| Motor Driver | To be used for driving table motors | [Ada Fruit](https://www.adafruit.com/product/807)|
+|2|$7.95 each; $15.90 for 2|Small Alligator Clip to Male Jumper Wire Bundle - 12 Pieces|To be used when we wire appliances to the breadboard|[Ada Fruit](https://www.adafruit.com/product/3255)|
 
 Here's the wishlist: http://www.adafruit.com/wishlists/503640
