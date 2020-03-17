@@ -10,6 +10,14 @@
 4. Chris Gunter (cgunter@ucsc.edu)
 5. Kenneth Mai (kcmai@ucsc.edu)
 
+### Teaching Assistant
+
+Arindam Sarma (asarma@ucsc.edu)
+
+### Professor
+
+Professor Richard Jullig (rjullig@ucsc.edu)
+
 
 ## List of Equipments
 
