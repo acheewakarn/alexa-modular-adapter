@@ -23,6 +23,6 @@
 |1|$12.50| Diffused RGB 5mm LED (25 pack)| To be used for prototyping|[Ada Fruit](https://www.adafruit.com/product/302)|
 |1|$0.75| Through-Hole Resistors - 10k ohm 5% 1/4W - Pack of 25| To be used for prototyping| [Ada Fruit](https://www.adafruit.com/product/2784)|
 |1|$2.50| Tactile Switch Buttons (12mm square, 6mm tall) x 10 pack|To be used for prototyping|[Ada Fruit](https://www.adafruit.com/product/1119)|
-|1|$2.95| Motor Driver | To be used for driving table motors | [Ada Fruit] (https://www.adafruit.com/product/807)|
+|1|$2.95| Motor Driver | To be used for driving table motors | [Ada Fruit](https://www.adafruit.com/product/807)|
 
 Here's the wishlist: http://www.adafruit.com/wishlists/503640
