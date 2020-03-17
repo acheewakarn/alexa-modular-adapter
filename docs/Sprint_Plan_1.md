@@ -33,15 +33,15 @@
   
 ## Initial Task Assignment
 
-**Anon Cheewakarn:** user story, initial task
+**Anon Cheewakarn:** User story 1, Task 2
 
-**Bryan Jimenez:** ...
+**Bryan Jimenez:** ... User story 1, Task 2
 
-**Cagan Bakirci:** ...
+**Cagan Bakirci:** ... User story 2, Task 2
 
-**Chris Gunter:** ...
+**Chris Gunter:** ... User story 1, Task 3
 
-**Kenneth Mai:** ...
+**Kenneth Mai:** ... User story 2, Task 1
 
 
 ## Initial Burnup Chart
