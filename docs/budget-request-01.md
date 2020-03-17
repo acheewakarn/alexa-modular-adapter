@@ -14,7 +14,7 @@
 ## List of Equipments
 
 |Quantity|Cost|Product|Reason|Retailer|
-|------|------|------|------|------|------|
+|------|------|------|------|------|
 |4|$7.95 each; $31.80 for 4|Assembled Pi T-Cobbler Plus - GPIO Breakout|We need this item to be able to connect our Raspberry Pi with a breadboard|[Ada Fruit](https://www.adafruit.com/product/2028)|
 |4|$5.95 each; $23.80 for 4|Full sized breadboard|This is where the connections between the Raspberry Pi and various appliances happen|[Ada Fruit](https://www.adafruit.com/product/239)|
 |8|$1.95 each; $15.60 for 8|Premium Male/Male Jumper Wires - 20 x 6" (150mm)|Used with breadboards|[Ada Fruit](https://www.adafruit.com/product/1957)|
