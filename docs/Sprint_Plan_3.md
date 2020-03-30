@@ -1,6 +1,6 @@
 # Sprint 3 Plan
 
-***[Product Name]*** by  ***Alexa-Enabled Accessibility Team 1***
+***Alexa Modular Adapter*** by  ***Alexa-Enabled Accessibility Team 1***
 
 **Sprint Completion Date:** [4/5/2020]
 
