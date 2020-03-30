@@ -45,24 +45,24 @@ Additional products can be found in the Product Backlogs section below.
 |------|------|------|
 |-|**~~3~~**|**Sprint 1 (Start: 02/18/20, End: 03/01/20)**|
 |~~5~~|~~3~~|~~As a user, I want to set up wi-fi using voice to ease up the setup process of my retrofitted products.~~
-|-|**21**|**Sprint 2 (Start: 03/02/20 End: 03/15/20)**|
+|-|**13**|**Sprint 2 (Start: 03/02/20 End: 03/15/20)**|
 |5|8|As a user, I want to set up a mock device with an AVS integrated RPi so I can control it via voice commands.|
 |5|5|As a user, I want to be able to adjust the mode of my Alexa-Enabled Mock Device using voice commands, so I can control its connected device.|
-|-|**18**|**Sprint 3 (Start: 03/16/20, End: 04/5/20)**|
+|-|**21**|**Sprint 3 (Start: 03/16/20, End: 04/5/20)**|
 |3|13|As a user, I want to be able to toggle my Adapted Musical Toy on/off using voice commands so I can control it despite my disability.|
 |2|8|As a user, I want to be able to switch modes on my Alexa-Enabled Musical Toy so I can change the music using voice commands.|
-|-|**13**|**Sprint 4 (Start: 04/06/20, End: 04/26/20)**|
+|-|**29**|**Sprint 4 (Start: 04/06/20, End: 04/26/20)**|
 |3|13|As a user, I want to be able to toggle my Adapted Musical Toy on/off using voice commands so I can control it despite my disability.|
 |2|8|As a user, I want to be able to switch modes on my Alexa-Enabled Musical Toy so I can change the music using voice commands.|
 |5|8|As a user, I want to set up my motorized desk with an AVS integrated RPi, so I can control it with voice commands.|
-|-|**21**|**Sprint 5 (Start: 04/27/20, End: 05/10/20)**|
+|-|**13**|**Sprint 5 (Start: 04/27/20, End: 05/10/20)**|
 |1|8|As a user, I want to set my desk to a specific preset height by saying “raise/lower my desk to mode x” to Alexa, so I can use the memory feature.|
 |4|5|As a user, I want to set up my Adapted Musical Toy with an Alexa Home Skills integrated RPi, so my toy can be controlled with voice commands.|
-|-|**15**|**Sprint 6 (Start: 05/11/20, End: 05/24/20)**|
+|-|**23**|**Sprint 6 (Start: 05/11/20, End: 05/24/20)**|
 |3|13|As a user, I want to be able to raise my motorized desk using voice commands such as “raise by 2 inches”, so I can adjust the desk to an optimal level.|
 |4|5|As a user, I want to be able to lower my motorized desk using voice commands such as “lower by 2 inches”, so I can adjust the desk to an optimal level.|
 |2|5|As a user, I want to set up my Adapted Fan to an AVS integrated RPi, so I can operate it with voice commands.|
-|-|**5+**|**Sprint 7 (Start: 05/25/20, End: 06/07/20)**|
+|-|**10+**|**Sprint 7 (Start: 05/25/20, End: 06/07/20)**|
 |2|5|As a user, I want to be able to toggle my Alexa-Enabled Adapted Fan on/off using voice commands, so it is more accessible.|
 |2|5|As a user, I want to adjust the level of my Alexa-Enabled Fan using voice commands, so I adjust it to a desired fan speed.|
 |?|?| Backlog|
