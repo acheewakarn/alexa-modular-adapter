@@ -5,16 +5,14 @@
 
 **Github:** github.com/acheewakarn/alexa-enabled-accessibility
 
-**Revision:** #3 on March 30, 2020
+**Revision:** #3 on March 31, 2020
 
 
 ## Personnel
 ### Team Members
 1. Anon Cheewakarn (acheewak@ucsc.edu)
-2. Bryan Jimenez (bjimene6@ucsc.edu)
-3. Cagan Bakirci (cbakirci@ucsc.edu)
-4. Chris Gunter (cgunter@ucsc.edu)
-5. Kenneth Mai (kcmai@ucsc.edu)
+2. Chris Gunter (cgunter@ucsc.edu)
+3. Kenneth Mai (kcmai@ucsc.edu)
 
 ### Amazon Liaison
 David Frerichs (dfrerich@amazon.com)
@@ -34,7 +32,6 @@ Arindam Sarma (asarma@ucsc.edu)
 |Product|Link|
 |------|------|
 |Baby Einstein Take Along Tunes Musical Switch Toy|https://tinyurl.com/s5cb68o|
-|Buzz Lightyear Walking Switch Adapted|https://tinyurl.com/uyrcgsc|
 |Switch Adapted Fan|https://tinyurl.com/tle9ex7|
 |Electric Adjustable Standing Desk|https://tinyurl.com/v72wv2l|
   
