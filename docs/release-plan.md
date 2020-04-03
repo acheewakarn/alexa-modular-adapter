@@ -41,10 +41,10 @@ Additional products can be found in the Product Backlogs section below.
 |Priority Level|Story Points|User Story|
 |------|------|------|
 |-|**~~3~~**|**Sprint 1 (Start: 02/18/20, End: 03/01/20)**|
-|~~5~~|~~3~~|~~As a user, I want to set up wi-fi using voice to ease up the setup process of my retrofitted products.~~
+|~~5|3|As a user, I want to set up wi-fi using voice to ease up the setup process of my retrofitted products.~~|
 |-|**13**|**Sprint 2 (Start: 03/02/20 End: 03/15/20)**|
-|5|8|As a user, I want to set up a mock device with an AVS integrated RPi so I can control it via voice commands.|
-|5|5|As a user, I want to be able to adjust the mode of my Alexa-Enabled Mock Device using voice commands, so I can control its connected device.|
+|~~5|8|As a user, I want to set up a mock device with an AVS integrated RPi so I can control it via voice commands.|
+|5|5|As a user, I want to be able to adjust the mode of my Alexa-Enabled Mock Device using voice commands, so I can control its connected device.~~|
 |-|**21**|**Sprint 3 (Start: 03/16/20, End: 04/5/20)**|
 |3|13|As a user, I want to be able to toggle my Adapted Musical Toy on/off using voice commands so I can control it despite my disability.|
 |2|8|As a user, I want to be able to switch modes on my Alexa-Enabled Musical Toy so I can change the music using voice commands.|
