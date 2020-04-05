@@ -28,7 +28,7 @@
 - As a user, I want to be able to switch modes on my Alexa-Enabled Musical Toy so I can change the music using voice commands.
   - Task 1: Implement the ability on the Musical Toy to change to different songs by clicking on different switches that we built. (~5 hours).
   - Task 2: Implement the AVS Home Kit endpoint ModeController for a mock device. Implement the SetMode to switch on different LEDs on a breadboard to simulate different modes on the Musical Toy.(~3 hours)
-  - Task 3: Combine the switches created in task 2 with the AVS Home Kit endpoint in task 2. (~ 1 hour)
+  - Task 3: Combine the switches created in task 1 with the AVS Home Kit endpoint in task 2. (~ 1 hour)
   
   Total Hours for User Story: ~9 Hours
 
