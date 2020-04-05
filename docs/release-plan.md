@@ -47,10 +47,12 @@ Additional products can be found in the Product Backlogs section below.
 |-|**21**|**Sprint 3 (Start: 03/23/20, End: 04/12/20)**|
 |3|13|As a user, I want to be able to toggle my Adapted Musical Toy on/off using voice commands so I can control it despite my disability.|
 |2|8|As a user, I want to be able to switch modes on my Alexa-Enabled Musical Toy so I can change the music using voice commands.|
-|-|**13**|**Sprint 4 (Start: 04/13/20, End: 04/26/20)**|
-|5|13|As a user, I want to set up my motorized desk with an AVS integrated RPi, so I can control it with voice commands.|
-|-|**18**|**Sprint 5 (Start: 04/27/20, End: 05/10/20)**|
+|-|**21**|**Sprint 4 (Start: 04/13/20, End: 04/26/20)**|
+|5|13|As a user, I want to set up my motorized desk with an AVS integrated RPi, so I can control its power status of being on or off.|
+|2|8|As a user, I want to be able to easily setup my RPI to know which device it is using some kind of system, without the user doing that much.|
+|-|**26**|**Sprint 5 (Start: 04/27/20, End: 05/10/20)**|
 |3|13|As a user, I want to be able to raise my motorized desk using voice commands such as “raise by 2 inches”, so I can adjust the desk to an optimal level.|
+|3|8|As a user, I want to be able to connect to my Wifi by using commands to the Alexa, so I don't need to stand up and do it myself.|
 |4|5|As a user, I want to be able to lower my motorized desk using voice commands such as “lower by 2 inches”, so I can adjust the desk to an optimal level.|
 |-|**13**|**Sprint 6 (Start: 05/11/20, End: 05/24/20)**|
 |1|8|As a user, I want to set my desk to a specific preset height by saying “raise/lower my desk to mode x” to Alexa, so I can use the memory feature.|
@@ -59,7 +61,7 @@ Additional products can be found in the Product Backlogs section below.
 |2|5|As a user, I want to be able to toggle my Alexa-Enabled Adapted Fan on/off using voice commands, so it is more accessible.|
 |2|5|As a user, I want to adjust the level of my Alexa-Enabled Fan using voice commands, so I adjust it to a desired fan speed.|
 |?|?| Backlog|
-|-|**Total Points: 93+**|**Story Count: 13**|
+|-|**Total Points: 104+**|**Story Count: 14**|
 
 ## Product Backlog
 |Product|Link|
