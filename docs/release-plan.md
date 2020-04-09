@@ -28,6 +28,12 @@ Arindam Sarma (asarma@ucsc.edu)
 * We want to set up a product that can act as an abstract device between a product’s switch interface and client’s Alexa voice interaction. 
 * We want to scale up our prototype to be used in more complex devices such as a motorized table.
 
+### Prototyping Hardwares
+|Hardware|Link|
+|------|------|
+|Raspberry Pi 4 B|https://tinyurl.com/yyfmu4rm|
+|Pimoroni Explorer Hat Pro|https://tinyurl.com/ssoefls|
+
 ### Selected Products
 |Product|Link|
 |------|------|
@@ -44,20 +50,20 @@ Additional products can be found in the Product Backlogs section below.
 |-|**13**|**Sprint 2 (Start: 03/02/20 End: 03/22/20)**|
 |~~5~~|~~8~~|~~As a user, I want to set up a mock device with an AVS integrated RPi so I can control it via voice commands.~~|
 |~~5~~|~~5~~|~~As a user, I want to be able to adjust the mode of my Alexa-Enabled Mock Device using voice commands, so I can control its connected device.~~|
-|-|**21**|**Sprint 3 (Start: 03/23/20, End: 04/12/20)**|
+|-|**21**|**Sprint 3 (Start: 03/23/20, End: 04/5/20)**|
 |3|13|As a user, I want to be able to toggle my Adapted Musical Toy on/off using voice commands so I can control it despite my disability.|
 |2|8|As a user, I want to be able to switch modes on my Alexa-Enabled Musical Toy so I can change the music using voice commands.|
-|-|**21**|**Sprint 4 (Start: 04/13/20, End: 04/26/20)**|
+|-|**21**|**Sprint 4 (Start: 04/6/20, End: 04/19/20)**|
 |5|13|As a user, I want to set up my motorized desk with an AVS integrated RPi, so I can control its power status of being on or off.|
 |2|8|As a user, I want to be able to easily setup my RPI to know which device it is using some kind of system, without the user doing that much.|
-|-|**26**|**Sprint 5 (Start: 04/27/20, End: 05/10/20)**|
+|-|**26**|**Sprint 5 (Start: 04/20/20, End: 05/3/20)**|
 |3|13|As a user, I want to be able to raise my motorized desk using voice commands such as “raise by 2 inches”, so I can adjust the desk to an optimal level.|
 |3|8|As a user, I want to be able to connect to my Wifi by using commands to the Alexa, so I don't need to stand up and do it myself.|
 |4|5|As a user, I want to be able to lower my motorized desk using voice commands such as “lower by 2 inches”, so I can adjust the desk to an optimal level.|
-|-|**13**|**Sprint 6 (Start: 05/11/20, End: 05/24/20)**|
+|-|**13**|**Sprint 6 (Start: 05/4/20, End: 05/17/20)**|
 |1|8|As a user, I want to set my desk to a specific preset height by saying “raise/lower my desk to mode x” to Alexa, so I can use the memory feature.|
 |2|5|As a user, I want to set up my Adapted Fan to an AVS integrated RPi, so I can operate it with voice commands.|
-|-|**10+**|**Sprint 7 (Start: 05/25/20, End: 06/07/20)**|
+|-|**10+**|**Sprint 7 (Start: 05/18/20, End: 06/07/20)**|
 |2|5|As a user, I want to be able to toggle my Alexa-Enabled Adapted Fan on/off using voice commands, so it is more accessible.|
 |2|5|As a user, I want to adjust the level of my Alexa-Enabled Fan using voice commands, so I adjust it to a desired fan speed.|
 |?|?| Backlog|
