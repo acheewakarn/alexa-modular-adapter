@@ -203,11 +203,11 @@ static const std::string SAMPLE_ENDPOINT_TOGGLE_CONTROLLER_INSTANCE_NAME("Musica
 
 // NO RANGE
 /// The instance name for the range controller.
-// static const std::string SAMPLE_ENDPOINT_RANGE_CONTROLLER_INSTANCE_NAME("Musical_Toy.Speed");
+static const std::string SAMPLE_ENDPOINT_RANGE_CONTROLLER_INSTANCE_NAME("Musical_Toy.Speed");
 
 // NO MODE
 /// The instance name for the mode controller.
-// static const std::string SAMPLE_ENDPOINT_MODE_CONTROLLER_INSTANCE_NAME("Musical_Toy.Mode");
+static const std::string SAMPLE_ENDPOINT_MODE_CONTROLLER_INSTANCE_NAME("Musical_Toy.Mode");
 
 /// The model of the endpoint.
 static const std::string SAMPLE_ENDPOINT_ADDITIONAL_ATTRIBUTE_MODEL("Model1");
@@ -225,13 +225,13 @@ static const std::string SAMPLE_ENDPOINT_ADDITIONAL_ATTRIBUTE_SOFTWARE_VERSION("
 static const std::string SAMPLE_ENDPOINT_ADDITIONAL_ATTRIBUTE_CUSTOM_IDENTIFIER("SampleApp");
 
 /// The range controller preset 'high'.
-// static const double SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_HIGH = 10;
+static const double SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_HIGH = 10;
 
 /// The range controller preset 'medium'.
-// static const double SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_MEDIUM = 5;
+static const double SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_MEDIUM = 5;
 
 /// The range controller preset 'low'.
-// static const double SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_LOW = 1;
+static const double SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_LOW = 1;
 
 /// US English locale string.
 static const std::string EN_US("en-US");
@@ -1090,121 +1090,121 @@ bool SampleApplication::initialize(
         false);
 #endif
 
-// #ifdef RANGE_CONTROLLER
-//     auto musicalToyRangeHandler = RangeControllerHandler::create();
-//     if (!musicalToyRangeHandler) {
-//         ACSDK_CRITICAL(LX("Failed to create range controller handler!"));
-//         return false;
-//     }
+#ifdef RANGE_CONTROLLER
+    auto musicalToyRangeHandler = RangeControllerHandler::create();
+    if (!musicalToyRangeHandler) {
+        ACSDK_CRITICAL(LX("Failed to create range controller handler!"));
+        return false;
+    }
 
-//     auto rangeControllerAttributeBuilder = capabilityAgents::rangeController::RangeControllerAttributeBuilder::create();
-//     if (!rangeControllerAttributeBuilder) {
-//         ACSDK_CRITICAL(LX("Failed to create range controller attribute builder!"));
-//         return false;
-//     }
+    auto rangeControllerAttributeBuilder = capabilityAgents::rangeController::RangeControllerAttributeBuilder::create();
+    if (!rangeControllerAttributeBuilder) {
+        ACSDK_CRITICAL(LX("Failed to create range controller attribute builder!"));
+        return false;
+    }
 
-//     auto rangeCapabilityResources = avsCommon::avs::CapabilityResources();
-//     if (!rangeCapabilityResources.addFriendlyNameWithText("Speed", EN_US)) {
-//         ACSDK_CRITICAL(LX("Failed to create Range Controller capability resources!"));
-//         return false;
-//     }
+    auto rangeCapabilityResources = avsCommon::avs::CapabilityResources();
+    if (!rangeCapabilityResources.addFriendlyNameWithText("Speed", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Range Controller capability resources!"));
+        return false;
+    }
 
-//     auto highPresetResources = avsCommon::avs::CapabilityResources();
-//     if (!highPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_MAXIMUM) ||
-//         !highPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_HIGH)) {
-//         ACSDK_CRITICAL(LX("Failed to create Range Controller HIGH preset resources!"));
-//         return false;
-//     }
+    auto highPresetResources = avsCommon::avs::CapabilityResources();
+    if (!highPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_MAXIMUM) ||
+        !highPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_HIGH)) {
+        ACSDK_CRITICAL(LX("Failed to create Range Controller HIGH preset resources!"));
+        return false;
+    }
 
-//     auto mediumPresetResources = avsCommon::avs::CapabilityResources();
-//     if (!mediumPresetResources.addFriendlyNameWithText("mid", EN_US) ||
-//         !mediumPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_MEDIUM)) {
-//         ACSDK_CRITICAL(LX("Failed to create Range Controller MEDIUM preset resources!"));
-//         return false;
-//     }
+    auto mediumPresetResources = avsCommon::avs::CapabilityResources();
+    if (!mediumPresetResources.addFriendlyNameWithText("mid", EN_US) ||
+        !mediumPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_MEDIUM)) {
+        ACSDK_CRITICAL(LX("Failed to create Range Controller MEDIUM preset resources!"));
+        return false;
+    }
 
-//     auto lowPresetResources = avsCommon::avs::CapabilityResources();
-//     if (!lowPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_MINIMUM) ||
-//         !lowPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_LOW)) {
-//         ACSDK_CRITICAL(LX("Failed to create Range Controller LOW preset resources!"));
-//         return false;
-//     }
+    auto lowPresetResources = avsCommon::avs::CapabilityResources();
+    if (!lowPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_MINIMUM) ||
+        !lowPresetResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_VALUE_LOW)) {
+        ACSDK_CRITICAL(LX("Failed to create Range Controller LOW preset resources!"));
+        return false;
+    }
 
-//     rangeControllerAttributeBuilder->withCapabilityResources(rangeCapabilityResources)
-//         .addPreset(std::make_pair(SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_HIGH, highPresetResources))
-//         .addPreset(std::make_pair(SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_MEDIUM, mediumPresetResources))
-//         .addPreset(std::make_pair(SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_LOW, lowPresetResources));
-//     auto rangeControllerAttributes = rangeControllerAttributeBuilder->build();
-//     if (!rangeControllerAttributes.hasValue()) {
-//         ACSDK_CRITICAL(LX("Failed to create Range Controller attributes!"));
-//         return false;
-//     }
+    rangeControllerAttributeBuilder->withCapabilityResources(rangeCapabilityResources)
+        .addPreset(std::make_pair(SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_HIGH, highPresetResources))
+        .addPreset(std::make_pair(SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_MEDIUM, mediumPresetResources))
+        .addPreset(std::make_pair(SAMPLE_ENDPOINT_RANGE_CONTROLLER_PRESET_LOW, lowPresetResources));
+    auto rangeControllerAttributes = rangeControllerAttributeBuilder->build();
+    if (!rangeControllerAttributes.hasValue()) {
+        ACSDK_CRITICAL(LX("Failed to create Range Controller attributes!"));
+        return false;
+    }
 
-//     musicalToyEndpointBuilder->withRangeController(
-//         musicalToyRangeHandler,
-//         SAMPLE_ENDPOINT_RANGE_CONTROLLER_INSTANCE_NAME,
-//         rangeControllerAttributes.value(),
-//         true,
-//         true,
-//         false);
-// #endif
+    musicalToyEndpointBuilder->withRangeController(
+        musicalToyRangeHandler,
+        SAMPLE_ENDPOINT_RANGE_CONTROLLER_INSTANCE_NAME,
+        rangeControllerAttributes.value(),
+        true,
+        true,
+        false);
+#endif
 
-// #ifdef MODE_CONTROLLER
-//     auto musicalToyModeHandler = ModeControllerHandler::create();
-//     if (!musicalToyModeHandler) {
-//         ACSDK_CRITICAL(LX("Failed to create mode controller handler!"));
-//         return false;
-//     }
-//     auto modeControllerAttributeBuilder = capabilityAgents::modeController::ModeControllerAttributeBuilder::create();
-//     if (!modeControllerAttributeBuilder) {
-//         ACSDK_CRITICAL(LX("Failed to create mode controller attribute builder!"));
-//         return false;
-//     }
+#ifdef MODE_CONTROLLER
+    auto musicalToyModeHandler = ModeControllerHandler::create();
+    if (!musicalToyModeHandler) {
+        ACSDK_CRITICAL(LX("Failed to create mode controller handler!"));
+        return false;
+    }
+    auto modeControllerAttributeBuilder = capabilityAgents::modeController::ModeControllerAttributeBuilder::create();
+    if (!modeControllerAttributeBuilder) {
+        ACSDK_CRITICAL(LX("Failed to create mode controller attribute builder!"));
+        return false;
+    }
 
-//     auto modeCapabilityResources = avsCommon::avs::CapabilityResources();
-//     if (!modeCapabilityResources.addFriendlyNameWithText("Song", EN_US) ||
-//         !modeCapabilityResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_SETTING_MODE)) {
-//         ACSDK_CRITICAL(LX("Failed to create Mode Controller capability resources!"));
-//         return false;
-//     }
+    auto modeCapabilityResources = avsCommon::avs::CapabilityResources();
+    if (!modeCapabilityResources.addFriendlyNameWithText("Song", EN_US) ||
+        !modeCapabilityResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_SETTING_MODE)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller capability resources!"));
+        return false;
+    }
 
-//     auto modeRegularResources = avsCommon::avs::CapabilityResources();
-//     if (!modeRegularResources.addFriendlyNameWithText("Regular", EN_US)) {
-//         ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Regular' mode resources!"));
-//         return false;
-//     }
+    auto modeRegularResources = avsCommon::avs::CapabilityResources();
+    if (!modeRegularResources.addFriendlyNameWithText("Regular", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Regular' mode resources!"));
+        return false;
+    }
 
-//     auto modeEcoResources = avsCommon::avs::CapabilityResources();
-//     if (!modeEcoResources.addFriendlyNameWithText("Eco", EN_US)) {
-//         ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Eco' mode resources!"));
-//         return false;
-//     }
+    auto modeEcoResources = avsCommon::avs::CapabilityResources();
+    if (!modeEcoResources.addFriendlyNameWithText("Eco", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Eco' mode resources!"));
+        return false;
+    }
 
-//     auto modeSportResources = avsCommon::avs::CapabilityResources();
-//     if (!modeSportResources.addFriendlyNameWithText("Sport", EN_US)) {
-//         ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Sport' mode resources!"));
-//         return false;
-//     }
+    auto modeSportResources = avsCommon::avs::CapabilityResources();
+    if (!modeSportResources.addFriendlyNameWithText("Sport", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Sport' mode resources!"));
+        return false;
+    }
 
-//     modeControllerAttributeBuilder->withCapabilityResources(modeCapabilityResources)
-//         .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_REGULAR, modeRegularResources)
-//         .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_ECO, modeEcoResources)
-//         .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_SPORT, modeSportResources)
-//         .setOrdered(true);
-//     auto modeControllerAttributes = modeControllerAttributeBuilder->build();
-//     if (!modeControllerAttributes.hasValue()) {
-//         ACSDK_CRITICAL(LX("Failed to create Mode Controller attributes!"));
-//         return false;
-//     }
+    modeControllerAttributeBuilder->withCapabilityResources(modeCapabilityResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_REGULAR, modeRegularResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_ECO, modeEcoResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_SPORT, modeSportResources)
+        .setOrdered(true);
+    auto modeControllerAttributes = modeControllerAttributeBuilder->build();
+    if (!modeControllerAttributes.hasValue()) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller attributes!"));
+        return false;
+    }
 
-//     musicalToyEndpointBuilder->withModeController(
-//         musicalToyModeHandler,
-//         SAMPLE_ENDPOINT_MODE_CONTROLLER_INSTANCE_NAME,
-//         modeControllerAttributes.value(),
-//         true,
-//         true,
-//         false);
-// #endif
+    musicalToyEndpointBuilder->withModeController(
+        musicalToyModeHandler,
+        SAMPLE_ENDPOINT_MODE_CONTROLLER_INSTANCE_NAME,
+        modeControllerAttributes.value(),
+        true,
+        true,
+        false);
+#endif
 
     auto musicalToyEndpointId = musicalToyEndpointBuilder->build();
     if (!musicalToyEndpointId.hasValue()) {
@@ -1265,14 +1265,14 @@ bool SampleApplication::initialize(
         ,
         musicalToyToggleHandler
 #endif
-// #ifdef RANGE_CONTROLLER
-//         ,
-//         musicalToyRangeHandler
-// #endif
-// #ifdef MODE_CONTROLLER
-//         ,
-//         musicalToyModeHandler
-// #endif
+#ifdef RANGE_CONTROLLER
+        ,
+        musicalToyRangeHandler
+#endif
+#ifdef MODE_CONTROLLER
+        ,
+        musicalToyModeHandler
+#endif
     );
 
 #else
@@ -1301,14 +1301,14 @@ bool SampleApplication::initialize(
         ,
         musicalToyToggleHandler
 #endif
-// #ifdef RANGE_CONTROLLER
-//         ,
-//         musicalToyRangeHandler
-// #endif
-// #ifdef MODE_CONTROLLER
-//         ,
-//         musicalToyModeHandler
-// #endif
+#ifdef RANGE_CONTROLLER
+        ,
+        musicalToyRangeHandler
+#endif
+#ifdef MODE_CONTROLLER
+        ,
+        musicalToyModeHandler
+#endif
     );
     // clang-format on
 #endif

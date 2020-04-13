@@ -72,13 +72,13 @@ std::pair<AlexaResponseType, std::string> PowerControllerHandler::setPowerState(
     std::unique_lock<std::mutex> lock(m_mutex);
     if (m_currentPowerState != state) {
         if (state) {
-            ConsolePrinter::prettyPrint("DEVICE : Musical TOY");
+            ConsolePrinter::prettyPrint("DEVICE : Musical Toy");
             ConsolePrinter::prettyPrint("POWER STATE : ON");
 
             // ADD WIRE PI CODE TO TURN ON
 
         } else {
-            ConsolePrinter::prettyPrint("DEVICE : Musical TOY");
+            ConsolePrinter::prettyPrint("DEVICE : Musical Toy");
             ConsolePrinter::prettyPrint("POWER STATE : OFF");
 
             // ADD WIRE PI CODE TO TURN OFF
