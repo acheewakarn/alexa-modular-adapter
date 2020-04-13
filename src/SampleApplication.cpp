@@ -1166,28 +1166,28 @@ bool SampleApplication::initialize(
         return false;
     }
 
-    auto modeRedResources = avsCommon::avs::CapabilityResources();
-    if (!modeRedResources.addFriendlyNameWithText("Red", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Red' mode resources!"));
+    auto modeRegularResources = avsCommon::avs::CapabilityResources();
+    if (!modeRegularResources.addFriendlyNameWithText("Regular", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Regular' mode resources!"));
         return false;
     }
 
-    auto modeGreenResources = avsCommon::avs::CapabilityResources();
-    if (!modeGreenResources.addFriendlyNameWithText("Green", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Green' mode resources!"));
+    auto modeEcoResources = avsCommon::avs::CapabilityResources();
+    if (!modeEcoResources.addFriendlyNameWithText("Eco", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Eco' mode resources!"));
         return false;
     }
 
-    auto modeBlueResources = avsCommon::avs::CapabilityResources();
-    if (!modeBlueResources.addFriendlyNameWithText("Blue", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Blue' mode resources!"));
+    auto modeSportResources = avsCommon::avs::CapabilityResources();
+    if (!modeSportResources.addFriendlyNameWithText("Sport", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Sport' mode resources!"));
         return false;
     }
 
     modeControllerAttributeBuilder->withCapabilityResources(modeCapabilityResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_REGULAR, modeRedResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_ECO, modeGreenResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_SPORT, modeBlueResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_REGULAR, modeRegularResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_ECO, modeEcoResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_SPORT, modeSportResources)
         .setOrdered(true);
     auto modeControllerAttributes = modeControllerAttributeBuilder->build();
     if (!modeControllerAttributes.hasValue()) {
