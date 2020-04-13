@@ -180,34 +180,32 @@ std::unordered_map<std::string, ExternalMediaPlayer::AdapterCreateFunction> Samp
 static const std::string TAG("SampleApplication");
 
 #ifdef ENABLE_ENDPOINT_CONTROLLERS_MENU
-// Note: Musical Toy is an imaginary endpoint where you can control its power, its Song (toggle)
-// its rotation speed (range) and the color of its Song (mode).
+// Note: Discoball is an imaginary endpoint where you can control its power, its light (toggle)
+// its rotation speed (range) and the color of its light (mode).
 
 /// The derived endpoint Id used in endpoint creation.
-static const std::string SAMPLE_ENDPOINT_DERIVED_ENDPOINT_ID("Musical_Toy");
+static const std::string SAMPLE_ENDPOINT_DERIVED_ENDPOINT_ID("Toy");
 
 /// The description of the endpoint.
-static const std::string SAMPLE_ENDPOINT_DESCRIPTION("Sample Musical Toy Description");
+static const std::string SAMPLE_ENDPOINT_DESCRIPTION("Sample Toy Description");
 
 /// The friendly name of the Endpoint. This is used in utterance.
-static const std::string SAMPLE_ENDPOINT_FRIENDLYNAME("Musical Toy");
+static const std::string SAMPLE_ENDPOINT_FRIENDLYNAME("Toy");
 
 /// The manufacturer of endpoint.
 static const std::string SAMPLE_ENDPOINT_MANUFACTURER_NAME("Sample Manufacturer");
 
 /// The display category of the endpoint.
-static const std::vector<std::string> SAMPLE_ENDPOINT_DISPLAYCATEGORY({"TOY"});
+static const std::vector<std::string> SAMPLE_ENDPOINT_DISPLAYCATEGORY({"OTHER"});
 
 /// The instance name for the toggle controller
-static const std::string SAMPLE_ENDPOINT_TOGGLE_CONTROLLER_INSTANCE_NAME("Musical_Toy.song");
+static const std::string SAMPLE_ENDPOINT_TOGGLE_CONTROLLER_INSTANCE_NAME("Toy.Song");
 
-// NO RANGE
 /// The instance name for the range controller.
-static const std::string SAMPLE_ENDPOINT_RANGE_CONTROLLER_INSTANCE_NAME("Musical_Toy.Speed");
+static const std::string SAMPLE_ENDPOINT_RANGE_CONTROLLER_INSTANCE_NAME("Toy.Speed");
 
-// NO MODE
 /// The instance name for the mode controller.
-static const std::string SAMPLE_ENDPOINT_MODE_CONTROLLER_INSTANCE_NAME("Musical_Toy.Mode");
+static const std::string SAMPLE_ENDPOINT_MODE_CONTROLLER_INSTANCE_NAME("Toy.Mode");
 
 /// The model of the endpoint.
 static const std::string SAMPLE_ENDPOINT_ADDITIONAL_ATTRIBUTE_MODEL("Model1");
@@ -1026,13 +1024,13 @@ bool SampleApplication::initialize(
     }
 
 #ifdef ENABLE_ENDPOINT_CONTROLLERS_MENU
-    auto musicalToyEndpointBuilder = client->createEndpointBuilder();
-    if (!musicalToyEndpointBuilder) {
+    auto toyEndpointBuilder = client->createEndpointBuilder();
+    if (!toyEndpointBuilder) {
         ACSDK_CRITICAL(LX("Failed to create Endpoint Builder!"));
         return false;
     }
 
-    musicalToyEndpointBuilder->withDerivedEndpointId(SAMPLE_ENDPOINT_DERIVED_ENDPOINT_ID)
+    toyEndpointBuilder->withDerivedEndpointId(SAMPLE_ENDPOINT_DERIVED_ENDPOINT_ID)
         .withDescription(SAMPLE_ENDPOINT_DESCRIPTION)
         .withFriendlyName(SAMPLE_ENDPOINT_FRIENDLYNAME)
         .withManufacturerName(SAMPLE_ENDPOINT_MANUFACTURER_NAME)
@@ -1046,17 +1044,17 @@ bool SampleApplication::initialize(
         .withDisplayCategory(SAMPLE_ENDPOINT_DISPLAYCATEGORY);
 
 #ifdef POWER_CONTROLLER
-    auto musicalToyPowerHandler = PowerControllerHandler::create();
-    if (!musicalToyPowerHandler) {
+    auto toyPowerHandler = PowerControllerHandler::create();
+    if (!toyPowerHandler) {
         ACSDK_CRITICAL(LX("Failed to create power controller handler!"));
         return false;
     }
-    musicalToyEndpointBuilder->withPowerController(musicalToyPowerHandler, true, true);
+    toyEndpointBuilder->withPowerController(toyPowerHandler, true, true);
 #endif
 
 #ifdef TOGGLE_CONTROLLER
-    auto musicalToyToggleHandler = ToggleControllerHandler::create();
-    if (!musicalToyToggleHandler) {
+    auto toyToggleHandler = ToggleControllerHandler::create();
+    if (!toyToggleHandler) {
         ACSDK_CRITICAL(LX("Failed to create toggle controller handler!"));
         return false;
     }
@@ -1069,7 +1067,7 @@ bool SampleApplication::initialize(
     }
 
     auto toggleCapabilityResources = avsCommon::avs::CapabilityResources();
-    if (!toggleCapabilityResources.addFriendlyNameWithText("Headlights", EN_US)) {
+    if (!toggleCapabilityResources.addFriendlyNameWithText("Song", EN_US)) {
         ACSDK_CRITICAL(LX("Failed to create Toggle Controller capability resources!"));
         return false;
     }
@@ -1081,8 +1079,8 @@ bool SampleApplication::initialize(
         return false;
     }
 
-    musicalToyEndpointBuilder->withToggleController(
-        musicalToyToggleHandler,
+    toyEndpointBuilder->withToggleController(
+        toyToggleHandler,
         SAMPLE_ENDPOINT_TOGGLE_CONTROLLER_INSTANCE_NAME,
         toggleControllerAttributes.value(),
         true,
@@ -1091,8 +1089,8 @@ bool SampleApplication::initialize(
 #endif
 
 #ifdef RANGE_CONTROLLER
-    auto musicalToyRangeHandler = RangeControllerHandler::create();
-    if (!musicalToyRangeHandler) {
+    auto toyRangeHandler = RangeControllerHandler::create();
+    if (!toyRangeHandler) {
         ACSDK_CRITICAL(LX("Failed to create range controller handler!"));
         return false;
     }
@@ -1140,8 +1138,8 @@ bool SampleApplication::initialize(
         return false;
     }
 
-    musicalToyEndpointBuilder->withRangeController(
-        musicalToyRangeHandler,
+    toyEndpointBuilder->withRangeController(
+        toyRangeHandler,
         SAMPLE_ENDPOINT_RANGE_CONTROLLER_INSTANCE_NAME,
         rangeControllerAttributes.value(),
         true,
@@ -1150,8 +1148,8 @@ bool SampleApplication::initialize(
 #endif
 
 #ifdef MODE_CONTROLLER
-    auto musicalToyModeHandler = ModeControllerHandler::create();
-    if (!musicalToyModeHandler) {
+    auto toyModeHandler = ModeControllerHandler::create();
+    if (!toyModeHandler) {
         ACSDK_CRITICAL(LX("Failed to create mode controller handler!"));
         return false;
     }
@@ -1162,34 +1160,34 @@ bool SampleApplication::initialize(
     }
 
     auto modeCapabilityResources = avsCommon::avs::CapabilityResources();
-    if (!modeCapabilityResources.addFriendlyNameWithText("Song", EN_US) ||
+    if (!modeCapabilityResources.addFriendlyNameWithText("Light", EN_US) ||
         !modeCapabilityResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_SETTING_MODE)) {
         ACSDK_CRITICAL(LX("Failed to create Mode Controller capability resources!"));
         return false;
     }
 
-    auto modeRegularResources = avsCommon::avs::CapabilityResources();
-    if (!modeRegularResources.addFriendlyNameWithText("Regular", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Regular' mode resources!"));
+    auto modeRedResources = avsCommon::avs::CapabilityResources();
+    if (!modeRedResources.addFriendlyNameWithText("Red", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Red' mode resources!"));
         return false;
     }
 
-    auto modeEcoResources = avsCommon::avs::CapabilityResources();
-    if (!modeEcoResources.addFriendlyNameWithText("Eco", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Eco' mode resources!"));
+    auto modeGreenResources = avsCommon::avs::CapabilityResources();
+    if (!modeGreenResources.addFriendlyNameWithText("Green", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Green' mode resources!"));
         return false;
     }
 
-    auto modeSportResources = avsCommon::avs::CapabilityResources();
-    if (!modeSportResources.addFriendlyNameWithText("Sport", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Sport' mode resources!"));
+    auto modeBlueResources = avsCommon::avs::CapabilityResources();
+    if (!modeBlueResources.addFriendlyNameWithText("Blue", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Blue' mode resources!"));
         return false;
     }
 
     modeControllerAttributeBuilder->withCapabilityResources(modeCapabilityResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_REGULAR, modeRegularResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_ECO, modeEcoResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_SPORT, modeSportResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_RED, modeRedResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_GREEN, modeGreenResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_BLUE, modeBlueResources)
         .setOrdered(true);
     auto modeControllerAttributes = modeControllerAttributeBuilder->build();
     if (!modeControllerAttributes.hasValue()) {
@@ -1197,8 +1195,8 @@ bool SampleApplication::initialize(
         return false;
     }
 
-    musicalToyEndpointBuilder->withModeController(
-        musicalToyModeHandler,
+    toyEndpointBuilder->withModeController(
+        toyModeHandler,
         SAMPLE_ENDPOINT_MODE_CONTROLLER_INSTANCE_NAME,
         modeControllerAttributes.value(),
         true,
@@ -1206,8 +1204,8 @@ bool SampleApplication::initialize(
         false);
 #endif
 
-    auto musicalToyEndpointId = musicalToyEndpointBuilder->build();
-    if (!musicalToyEndpointId.hasValue()) {
+    auto toyEndpointId = toyEndpointBuilder->build();
+    if (!toyEndpointId.hasValue()) {
         ACSDK_CRITICAL(LX("Failed to create Smart Home Endpoint!"));
         return false;
     }
@@ -1259,19 +1257,19 @@ bool SampleApplication::initialize(
         wakeWordAudioProvider
 #ifdef POWER_CONTROLLER
         ,
-        musicalToyPowerHandler
+        toyPowerHandler
 #endif
 #ifdef TOGGLE_CONTROLLER
         ,
-        musicalToyToggleHandler
+        toyToggleHandler
 #endif
 #ifdef RANGE_CONTROLLER
         ,
-        musicalToyRangeHandler
+        toyRangeHandler
 #endif
 #ifdef MODE_CONTROLLER
         ,
-        musicalToyModeHandler
+        toyModeHandler
 #endif
     );
 
@@ -1295,19 +1293,19 @@ bool SampleApplication::initialize(
         capabilityAgents::aip::AudioProvider::null()
 #ifdef POWER_CONTROLLER
         ,
-        musicalToyPowerHandler
+        toyPowerHandler
 #endif
 #ifdef TOGGLE_CONTROLLER
         ,
-        musicalToyToggleHandler
+        toyToggleHandler
 #endif
 #ifdef RANGE_CONTROLLER
         ,
-        musicalToyRangeHandler
+        toyRangeHandler
 #endif
 #ifdef MODE_CONTROLLER
         ,
-        musicalToyModeHandler
+        toyModeHandler
 #endif
     );
     // clang-format on

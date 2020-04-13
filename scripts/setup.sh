@@ -1,7 +1,7 @@
 echo 'Setting up SmartHome for AVS...'
 
 echo 'Copying files to destination...'
-cp ../src/*.cpp ~/sdk-folder/sdk-source/avs-device-sdk/SampleApp/src
+cp -f ../src/*.cpp ~/sdk-folder/sdk-source/avs-device-sdk/SampleApp/src
 
 echo 'Building...'
 cd ~/sdk-folder/sdk-build

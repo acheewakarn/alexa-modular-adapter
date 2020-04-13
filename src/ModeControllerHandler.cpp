@@ -67,7 +67,7 @@ std::pair<AlexaResponseType, std::string> ModeControllerHandler::setMode(
     bool notifyObserver = false;
 
     {
-        std::lock_guard<std::mutex> lock{m_mutex};
+        std::lo ck_guard<std::mutex> lock{m_mutex};
         if (mode.empty() || std::find(m_modes.begin(), m_modes.end(), mode) == m_modes.end()) {
             ACSDK_ERROR(LX("setModeFailed").d("reason", "invalidMode").d("mode", mode));
             return std::make_pair(AlexaResponseType::VALUE_OUT_OF_RANGE, "invalidMode");
