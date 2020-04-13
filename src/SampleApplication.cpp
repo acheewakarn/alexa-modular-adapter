@@ -1185,9 +1185,9 @@ bool SampleApplication::initialize(
     }
 
     modeControllerAttributeBuilder->withCapabilityResources(modeCapabilityResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_RED, modeRedResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_GREEN, modeGreenResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_BLUE, modeBlueResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_REGULAR, modeRedResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_ECO, modeGreenResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_SPORT, modeBlueResources)
         .setOrdered(true);
     auto modeControllerAttributes = modeControllerAttributeBuilder->build();
     if (!modeControllerAttributes.hasValue()) {

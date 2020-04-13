@@ -1,7 +1,9 @@
 echo 'Setting up SmartHome for AVS...'
 
 echo 'Copying files to destination...'
-cp -f ../src/*.cpp ~/sdk-folder/sdk-source/avs-device-sdk/SampleApp/src
+cp ../src/* ~/sdk-folder/sdk-source/avs-device-sdk/SampleApp/src
+
+&&
 
 echo 'Building...'
 cd ~/sdk-folder/sdk-build
@@ -15,7 +17,11 @@ cmake ~/sdk-folder/sdk-source/avs-device-sdk \
 -DPORTAUDIO_INCLUDE_DIR=/home/pi/sdk-folder/third-party/portaudio/include \
 -DENABLE_ALL_ENDPOINT_CONTROLLERS=ON
 
+&& 
+
 make SampleApp
+
+&& 
 
 echo 'Generate config.json...'
 cd ~/sdk-folder/sdk-source/avs-device-sdk/tools/Install 
@@ -26,6 +32,8 @@ bash genConfig.sh config.json 12345 \
 ~/sdk-folder/sdk-build/Integration/AlexaClientSDKConfig.json \
 -DSDK_CONFIG_MANUFACTURER_NAME="raspberrypi" \
 -DSDK_CONFIG_DEVICE_DESCRIPTION="raspberrypi" \
+
+&& 
 
 echo 'Running AVS SDK: Sample App...'
 cd /home/pi/sdk-folder/sdk-build
