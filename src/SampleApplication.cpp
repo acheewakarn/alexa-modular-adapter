@@ -180,7 +180,7 @@ std::unordered_map<std::string, ExternalMediaPlayer::AdapterCreateFunction> Samp
 static const std::string TAG("SampleApplication");
 
 #ifdef ENABLE_ENDPOINT_CONTROLLERS_MENU
-// Note: Discoball is an imaginary endpoint where you can control its power, its light (toggle)
+// Note: Toy is an imaginary endpoint where you can control its power, its light (toggle)
 // its rotation speed (range) and the color of its light (mode).
 
 /// The derived endpoint Id used in endpoint creation.
@@ -199,7 +199,7 @@ static const std::string SAMPLE_ENDPOINT_MANUFACTURER_NAME("Sample Manufacturer"
 static const std::vector<std::string> SAMPLE_ENDPOINT_DISPLAYCATEGORY({"OTHER"});
 
 /// The instance name for the toggle controller
-static const std::string SAMPLE_ENDPOINT_TOGGLE_CONTROLLER_INSTANCE_NAME("Toy.Song");
+static const std::string SAMPLE_ENDPOINT_TOGGLE_CONTROLLER_INSTANCE_NAME("Toy.Light");
 
 /// The instance name for the range controller.
 static const std::string SAMPLE_ENDPOINT_RANGE_CONTROLLER_INSTANCE_NAME("Toy.Speed");
@@ -1067,7 +1067,7 @@ bool SampleApplication::initialize(
     }
 
     auto toggleCapabilityResources = avsCommon::avs::CapabilityResources();
-    if (!toggleCapabilityResources.addFriendlyNameWithText("Song", EN_US)) {
+    if (!toggleCapabilityResources.addFriendlyNameWithText("Next Song", EN_US)) {
         ACSDK_CRITICAL(LX("Failed to create Toggle Controller capability resources!"));
         return false;
     }
@@ -1166,28 +1166,35 @@ bool SampleApplication::initialize(
         return false;
     }
 
-    auto modeRegularResources = avsCommon::avs::CapabilityResources();
-    if (!modeRegularResources.addFriendlyNameWithText("Regular", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Regular' mode resources!"));
+    auto modeAResources = avsCommon::avs::CapabilityResources();
+    if (!modeAResources.addFriendlyNameWithText("No Song", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'A' mode resources!"));
         return false;
     }
 
-    auto modeEcoResources = avsCommon::avs::CapabilityResources();
-    if (!modeEcoResources.addFriendlyNameWithText("Eco", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Eco' mode resources!"));
+    auto modeBResources = avsCommon::avs::CapabilityResources();
+    if (!modeBResources.addFriendlyNameWithText("First Song", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'B' mode resources!"));
         return false;
     }
 
-    auto modeSportResources = avsCommon::avs::CapabilityResources();
-    if (!modeSportResources.addFriendlyNameWithText("Sport", EN_US)) {
-        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'Sport' mode resources!"));
+    auto modeCResources = avsCommon::avs::CapabilityResources();
+    if (!modeCResources.addFriendlyNameWithText("Second Song", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'C' mode resources!"));
+        return false;
+    }    
+    
+    auto modeDResources = avsCommon::avs::CapabilityResources();
+    if (!modeDResources.addFriendlyNameWithText("Third Song", EN_US)) {
+        ACSDK_CRITICAL(LX("Failed to create Mode Controller 'D' mode resources!"));
         return false;
     }
 
     modeControllerAttributeBuilder->withCapabilityResources(modeCapabilityResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_REGULAR, modeRegularResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_ECO, modeEcoResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_SPORT, modeSportResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_A, modeAResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_B, modeBResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_C, modeCResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_D, modeCResources)
         .setOrdered(true);
     auto modeControllerAttributes = modeControllerAttributeBuilder->build();
     if (!modeControllerAttributes.hasValue()) {

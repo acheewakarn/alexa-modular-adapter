@@ -39,11 +39,15 @@ using namespace avsCommon::avs;
 using namespace avsCommon::sdkInterfaces;
 using namespace avsCommon::sdkInterfaces::modeController;
 
-const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_REGULAR = "Regular";
 
-const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_ECO = "Eco";
+const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_A = "No Song";
 
-const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_SPORT = "Sport";
+const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_B = "First Song";
+
+const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_C = "Second Song";
+
+const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_D = "Third Song";
+
 
 std::shared_ptr<ModeControllerHandler> ModeControllerHandler::create() {
     auto modeControllerHandler = std::shared_ptr<ModeControllerHandler>(new ModeControllerHandler());
@@ -51,7 +55,7 @@ std::shared_ptr<ModeControllerHandler> ModeControllerHandler::create() {
 }
 
 ModeControllerHandler::ModeControllerHandler() {
-    m_modes = {MODE_CONTROLLER_MODE_REGULAR, MODE_CONTROLLER_MODE_ECO, MODE_CONTROLLER_MODE_SPORT};
+    m_modes = {MODE_CONTROLLER_MODE_A, MODE_CONTROLLER_MODE_B, MODE_CONTROLLER_MODE_C, MODE_CONTROLLER_MODE_D};
     m_currentMode = m_modes[0];
 }
 
@@ -67,17 +71,49 @@ std::pair<AlexaResponseType, std::string> ModeControllerHandler::setMode(
     bool notifyObserver = false;
 
     {
-        std::lo ck_guard<std::mutex> lock{m_mutex};
+        std::lock_guard<std::mutex> lock{m_mutex};
         if (mode.empty() || std::find(m_modes.begin(), m_modes.end(), mode) == m_modes.end()) {
             ACSDK_ERROR(LX("setModeFailed").d("reason", "invalidMode").d("mode", mode));
             return std::make_pair(AlexaResponseType::VALUE_OUT_OF_RANGE, "invalidMode");
         }
 
         if (m_currentMode != mode) {
+            ConsolePrinter::prettyPrint("DEVICE NAME: TOY");
             ConsolePrinter::prettyPrint("SET MODE TO : " + mode);
-            m_currentMode = mode;
+
+            if (mode == "First Song" ){
+
+                // WIRE PI CODE HERE TO TOGGLE TO PIN n TIMES TO GET TO THE FIRST SONG
+                m_currentMode = mode;
+                copyOfObservers = m_observers;
+                notifyObserver = true;
+
+            } else if (mode == "Second Song") {
+
+                // WIRE PI CODE HERE TO TOGGLE TO PIN n TIMES TO GET TO THE SECOND SONG
+
+                m_currentMode = mode;
+                copyOfObservers = m_observers;
+                notifyObserver = true;
+
+            } else if (mode == "Third Song") {
+               
+                // WIRE PI CODE HERE TO TOGGLE TO PIN n TIMES TO GET TO THE THIRD SONG
+
+                m_currentMode = mode;
+                copyOfObservers = m_observers;
+                notifyObserver = true; 
+            }
+
+            // sleep for maybe 5 secs? or until the song ends
+
+
+            // Change back to No Song
+            m_currentMode = "No Song";
             copyOfObservers = m_observers;
             notifyObserver = true;
+
+
         }
     }
 
@@ -110,7 +146,7 @@ std::pair<AlexaResponseType, std::string> ModeControllerHandler::adjustMode(
             ACSDK_ERROR(LX("adjustModeFailed").d("reason", "requestedModeInvalid").d("modeDelta", modeDelta));
             return std::make_pair(AlexaResponseType::INVALID_VALUE, "requestedModeInvalid");
         }
-        ConsolePrinter::prettyPrint("DEVICE : Musical Toy");
+
         m_currentMode = *itr;
         ConsolePrinter::prettyPrint("CURRENT MODE : " + m_currentMode);
         copyOfObservers = m_observers;
