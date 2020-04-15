@@ -1194,7 +1194,7 @@ bool SampleApplication::initialize(
         .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_A, modeAResources)
         .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_B, modeBResources)
         .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_C, modeCResources)
-        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_D, modeCResources)
+        .addMode(ModeControllerHandler::MODE_CONTROLLER_MODE_D, modeDResources)
         .setOrdered(true);
     auto modeControllerAttributes = modeControllerAttributeBuilder->build();
     if (!modeControllerAttributes.hasValue()) {
