@@ -56,11 +56,11 @@ Additional products can be found in the Product Backlogs section below.
 |-|**18**|**Sprint 4 (Start: 04/13/20, End: 04/19/20)**|
 |3|13|As a user, I want to be able to raise my motorized desk using voice commands such as “raise by 2”, so I can adjust the desk to an optimal level.|
 |4|5|As a user, I want to be able to lower my motorized desk using voice commands such as “lower by 2”, so I can adjust the desk to an optimal level.|
-|-|**24**|**Sprint 5 (Start: 04/20/20, End: 05/3/20)**|
-|3|8|As a user, I want to be able to connect to my Wifi by using commands to the Alexa, so I don't need to stand up and do it myself.|
+|-|**16**|**Sprint 5 (Start: 04/20/20, End: 05/3/20)**|
 |2|8|As a user, I want to be able to easily setup my RPI to know which device it is using some kind of system, without the user doing that much.|
 |2|8|As a user, I want to set my desk to a specific preset height by saying “raise/lower my desk to mode x” to Alexa, so I can use the memory feature.|
 |-|**13**|**Sprint 6 (Start: 05/4/20, End: 05/17/20)**|
+|3|8|As a user, I want to be able to connect to my Wifi by using commands to the Alexa, so I don't need to stand up and do it myself.|
 |2|5|As a user, I want to set up my Adapted Fan to an AVS integrated RPi, so I can operate it with voice commands.|
 |-|**10+**|**Sprint 7 (Start: 05/18/20, End: 06/07/20)**|
 |2|5|As a user, I want to be able to toggle my Alexa-Enabled Adapted Fan on/off using voice commands, so it is more accessible.|
