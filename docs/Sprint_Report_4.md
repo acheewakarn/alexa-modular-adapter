@@ -13,12 +13,13 @@
 
 ## Actions to stop doing
 
-- Make sure meetings are quicker and run through the SCRUM Board.
+- 
 
 ## Actions to start doing
 
 - Add more comments to code, so when it passed to Amazon. They can easily understand the work that was done.
 - Add content to README.md to help setup the AVS homekit and execute their own AVS HomeKit Skills.
+- Make sure meetings are quicker and run through the SCRUM Board.
 
 ## Actions to keep doing
 
