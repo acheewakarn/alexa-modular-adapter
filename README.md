@@ -18,7 +18,6 @@ CSE115B -  Amazon sponsored project "Alexa-Enabled Accessibility"
 2. From that link, scroll down and select your platform (Raspberry Pi).
 3. That link will give you a series of instructions. Follow those instructions until you get to the step "Build the SDK".
 4. When you get to that step, you will run these commands instead of the ones given in the link:
-<br>
  `cd /home/pi/sdk-folder/sdk-build
  cmake /home/pi/sdk-folder/sdk-source/avs-device-sdk \
  -DSENSORY_KEY_WORD_DETECTOR=ON \
