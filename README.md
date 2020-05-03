@@ -1,5 +1,6 @@
 # Alexa-Enabled Accessibility
-CSE115B -  Amazon sponsored project "Alexa-Enabled Accessibility"
+UCSC Computer Science and Engineering Senior Capstone Project. Sponsored by Amazon; Amazon Alexa.
+Working in collaboeration with the "Alexa for Everyone" Team @ Santa Cruz, CA
 
 
 ## Wiki
