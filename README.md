@@ -3,17 +3,15 @@ UCSC Computer Science and Engineering Senior Capstone Project. Sponsored by Amaz
 
 Working in collaboeration with the "Alexa for Everyone" Team @ Santa Cruz, CA
 
-
-## Wiki
-
-## Set Up AVS Smart Home
+## Set Up AVS SDK
 ### Requirements
-1. Raspberry Pi 3B or 4.
-2. Ability to connect to WiFi.
+1. Raspberry Pi 3B or 4
+2. Internet connection
 3. USB microphone 
 4. Keyboard
 5. Mouse
-6. A microSD card with Raspbian on it.
+6. A microSD card with Raspbian
+7. Monitor (optional, can SSH from another device)
 
 ### Steps To Setup AVS Smart Home on RPI
 1. Go this link [AVS Device SDK Repository](https://github.com/alexa/avs-device-sdk).
