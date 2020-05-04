@@ -2,7 +2,7 @@
 
 ***Module Adapter*** by  ***Alexa-Enabled Accessibility Team 1***
 
-**Sprint Completion Date:** 4/20/20
+**Sprint Period:** 4/20/20-5/03/20
 
 **Github:** github.com/acheewakarn/amazon-enabled-accessibility
 
