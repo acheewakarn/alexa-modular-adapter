@@ -36,3 +36,10 @@
 - As a user, I want to be able to raise my motorized desk using voice commands such as “raise by 2”, so I can adjust the desk to an optimal level.
 
 
+## Work completion Rate
+
+- Burn Up Chart 19/39 hours of work.
+
+## Final Scrum and Burn-Up Chart:
+
+![alt text](Sprint_4_Final_SCRUM_And_BurnUp_Chart.jpeg "ScrumBoard and BurnUp Chart")

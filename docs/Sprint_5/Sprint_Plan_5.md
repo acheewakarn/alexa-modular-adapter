@@ -44,19 +44,15 @@
 
 **Kenneth Mai:** user story 4, initial task 1
 
+## Initial Burnup Chart & Initial Scrum Board
 
-## Initial Burnup Chart
+![alt text](Sprint_5_Initial_SCRUM_And_BurnUp_Chart.jpeg "ScrumBoard and BurnUp Chart")
 
-...
-
-## Initial Scrum Board
-
-...
 
 ## Meeting Time
 
-|Day|Time|TA|
-|------|------|------|
-|Monday/Wednesday/Friday|1:30-2:30PM|No|
-|Tuesday|3:20-4:05PM|Yes|
+| Day                     | Time        | TA  |
+| ----------------------- | ----------- | --- |
+| Monday/Wednesday/Friday | 1:30-2:30PM | No  |
+| Tuesday                 | 3:20-4:05PM | Yes |
 

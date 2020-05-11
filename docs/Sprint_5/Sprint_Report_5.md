@@ -32,6 +32,13 @@
 - As a user, I want to set my desk to a specific preset height by saying “raise/lower my desk to mode x” to Alexa, so I can use the memory feature.
 
 
+## Work completion Rate
+
+- Burn Up Chart 29/50 hours of work.
+
+## Final Scrum and Burn-Up Chart:
+
+![alt text](Sprint_4_Final_SCRUM_And_BurnUp_Chart.jpeg "ScrumBoard and BurnUp Chart")
 
 
 

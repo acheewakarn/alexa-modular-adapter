@@ -37,3 +37,7 @@
 
 - Burn Up Chart 11/19 hours of work.
 
+## Final Scrum and Burn-Up Chart:
+
+![alt text](Sprint_3_Final_SCRUM_And_BurnUp_Chart.jpeg "ScrumBoard and BurnUp Chart")
+

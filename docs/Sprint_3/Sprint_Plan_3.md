@@ -41,10 +41,9 @@
 **Kenneth Mai:** User Story 1, Task 2
 
 
-## Initial Burnup Chart
+## Initial Burnup Chart & Initial Scrum Board
 
-
-## Initial Scrum Board
+![alt text](Sprint_3_Initial_SCRUM_And_BurnUp_Chart.jpeg "ScrumBoard and BurnUp Chart")
 
 Physical scrum board in room 316 
 

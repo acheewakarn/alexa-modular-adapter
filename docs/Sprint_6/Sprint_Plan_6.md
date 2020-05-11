@@ -38,13 +38,12 @@
 
 ## Initial Burnup Chart & Initial Scrum Board
 
-![image](Sprint_6_Initial_SCRUM_And_BurnUp_Chart.jpeg)
 ![alt text](Sprint_6_Initial_SCRUM_And_BurnUp_Chart.jpeg "ScrumBoard and BurnUp Chart")
 
 ## Meeting Time
 
-|Day|Time|TA|
-|------|------|------|
-|Monday/Wednesday/Friday|1:30-2:30PM|No|
-|Tuesday|3:20-4:05PM|Yes|
+| Day                     | Time        | TA  |
+| ----------------------- | ----------- | --- |
+| Monday/Wednesday/Friday | 1:30-2:30PM | No  |
+| Tuesday                 | 3:20-4:05PM | Yes |
 
