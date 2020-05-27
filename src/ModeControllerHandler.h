@@ -42,7 +42,7 @@ public:
      *
      * @return A pointer to a new @c ModeControllerHandler object if it succeeds; otherwise, @c nullptr.
      */
-    static std::shared_ptr<ModeControllerHandler> create();
+    static std::shared_ptr<ModeControllerHandler> create(std::string endpointId);
 
     /// @name ModeControllerInterface methods
     /// @{
@@ -89,7 +89,9 @@ private:
     /**
      * Constructor.
      */
-    ModeControllerHandler();
+    ModeControllerHandler(std::string endpointId);
+
+    std::string m_endpointId;
 
     /// Current mode of the capability.
     std::string m_currentMode;

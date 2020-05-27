@@ -49,12 +49,12 @@ const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_C = "Second Song";
 const std::string ModeControllerHandler::MODE_CONTROLLER_MODE_D = "Third Song";
 
 
-std::shared_ptr<ModeControllerHandler> ModeControllerHandler::create() {
-    auto modeControllerHandler = std::shared_ptr<ModeControllerHandler>(new ModeControllerHandler());
+std::shared_ptr<ModeControllerHandler> ModeControllerHandler::create(std::string endpointId) {
+    auto modeControllerHandler = std::shared_ptr<ModeControllerHandler>(new ModeControllerHandler(endpointId));
     return modeControllerHandler;
 }
 
-ModeControllerHandler::ModeControllerHandler() {
+ModeControllerHandler::ModeControllerHandler(std::string endpointId) : m_endpointId(endpointId) {
     m_modes = {MODE_CONTROLLER_MODE_A, MODE_CONTROLLER_MODE_B, MODE_CONTROLLER_MODE_C, MODE_CONTROLLER_MODE_D};
     m_currentMode = m_modes[0];
 }
@@ -78,36 +78,40 @@ std::pair<AlexaResponseType, std::string> ModeControllerHandler::setMode(
         }
 
         if (m_currentMode != mode) {
-            ConsolePrinter::prettyPrint("DEVICE NAME: TOY");
+            ConsolePrinter::prettyPrint("DEVICE NAME: " + m_endpointId);
             ConsolePrinter::prettyPrint("SET MODE TO : " + mode);
 
             if (mode == "First Song" ){
 
-                // WIRE PI CODE HERE TO TOGGLE TO PIN n TIMES TO GET TO THE FIRST SONG
+                //TODO: Insert Wire Pi code to change to mode one
                 m_currentMode = mode;
                 copyOfObservers = m_observers;
                 notifyObserver = true;
 
             } else if (mode == "Second Song") {
 
-                // WIRE PI CODE HERE TO TOGGLE TO PIN n TIMES TO GET TO THE SECOND SONG
-
+                //TODO: Insert Wire Pi code to change to mode two
                 m_currentMode = mode;
                 copyOfObservers = m_observers;
                 notifyObserver = true;
 
             } else if (mode == "Third Song") {
                
-                // WIRE PI CODE HERE TO TOGGLE TO PIN n TIMES TO GET TO THE THIRD SONG
+                //TODO: Insert Wire Pi code to change to mode three
+                m_currentMode = mode;
+                copyOfObservers = m_observers;
+                notifyObserver = true; 
 
+            } else if (mode == "Forth Song") {
+               
+                //TODO: Insert Wire Pi code to change to mode four
                 m_currentMode = mode;
                 copyOfObservers = m_observers;
                 notifyObserver = true; 
             }
 
-            // sleep for maybe 5 secs? or until the song ends
-
-
+            // This is for the musical toy specifically, change mode back to No song so it can use the same pattern to toggle back again..
+            
             // Change back to No Song
             m_currentMode = "No Song";
             copyOfObservers = m_observers;

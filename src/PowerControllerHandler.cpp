@@ -20,6 +20,8 @@
 #include "SampleApp/PowerControllerHandler.h"
 #include "SampleApp/ConsolePrinter.h"
 
+// #include "SampleApp/ReadJsonExample.h"
+
 /// String to identify log entries originating from this file.
 static const std::string TAG("PowerControllerHandler");
 
@@ -55,12 +57,16 @@ static void notifyObservers(
     }
 }
 
-std::shared_ptr<PowerControllerHandler> PowerControllerHandler::create() {
-    auto powerControllerHandler = std::shared_ptr<PowerControllerHandler>(new PowerControllerHandler());
+
+std::shared_ptr<PowerControllerHandler> PowerControllerHandler::create(std::string endpointId) {
+
+    auto powerControllerHandler = std::shared_ptr<PowerControllerHandler>(new PowerControllerHandler(endpointId));
+
     return powerControllerHandler;
 }
 
-PowerControllerHandler::PowerControllerHandler() : m_currentPowerState{false} {
+
+PowerControllerHandler::PowerControllerHandler(std::string endpointId) :  m_endpointId(endpointId), m_currentPowerState(false) {
 }
 
 std::pair<AlexaResponseType, std::string> PowerControllerHandler::setPowerState(
@@ -72,15 +78,17 @@ std::pair<AlexaResponseType, std::string> PowerControllerHandler::setPowerState(
     std::unique_lock<std::mutex> lock(m_mutex);
     if (m_currentPowerState != state) {
         if (state) {
-            ConsolePrinter::prettyPrint("DEVICE NAME : TOY");
+
+            ConsolePrinter::prettyPrint("DEVICE NAME : " + m_endpointId);
             ConsolePrinter::prettyPrint("POWER STATE : ON");
 
-            // WIRE PI CODE HERE
+                //TODO: Insert Wire Pi code to turn on device
+        
         } else {
-            ConsolePrinter::prettyPrint("DEVICE NAME : TOY");
+            ConsolePrinter::prettyPrint("DEVICE NAME : " + m_endpointId);
             ConsolePrinter::prettyPrint("POWER STATE : OFF");
-
-            // WIRE PI CODE HERE
+            
+                //TODO: Insert Wire Pi code to turn off device
         }
 
         m_currentPowerState = state;
