@@ -1097,17 +1097,30 @@ bool SampleApplication::initialize(
             mechanism.
         */
 
-        std::string endpointId = "";
-        std::string friendlyName = "";
+    std::vector<std::string> endpointId;
+    std::vector<std::string> friendlyName;
+    // std::string endpointId = "";
+    // std::string friendlyName = "";
+    
 
-        for(const Json::Value& connectedPin : root["connectedPin"]){
-            if (true) { 
-                std::cout << connectedPin["endpointId"].asString() << std::endl;
-                endpointId = connectedPin["endpointId"].asString();
-                friendlyName = connectedPin["friendlyName"].asString();
-            }
+    for(const Json::Value& connectedPin : root["connectedPin"]){
+        if (true) { // change "true" to logic that checks if "connectedPin" is connected (i.e. pull up/down signal detected)
+            endpointId.push_back(connectedPin["endpointId"].asString());
+            friendlyName.push_back(connectedPin["friendlyName"].asString());
+            // std::cout << connectedPin["endpointId"].asString() << std::endl;
+            // std::cout << connectedPin["friendlyName"].asString() << std::endl;
         }
+    }
 
+    std::cout << endpointId[0] << std::endl;
+    std::cout << friendlyName[0] << std::endl;
+
+    // for (std::vector<std::string>::iterator it = endpointId.begin(); it != endpointId.end(); ++it){
+    //     // std::cout << endpointId[i] << std::endl;
+    //     // std::cout << friendlyName[i] << std::endl;
+    //     std::cout << *it << std::endl;
+    //     // std::cout << friendlyName[i] << std::endl;
+    // }
 
 
 
@@ -1117,9 +1130,9 @@ bool SampleApplication::initialize(
         return false;
     }
 
-    discoballEndpointBuilder->withDerivedEndpointId(SAMPLE_ENDPOINT_DERIVED_ENDPOINT_ID)
+    discoballEndpointBuilder->withDerivedEndpointId(endpointId[0])
         .withDescription(SAMPLE_ENDPOINT_DESCRIPTION)
-        .withFriendlyName(SAMPLE_ENDPOINT_FRIENDLYNAME)
+        .withFriendlyName(friendlyName[0])
         .withManufacturerName(SAMPLE_ENDPOINT_MANUFACTURER_NAME)
         .withAdditionalAttributes(
             SAMPLE_ENDPOINT_MANUFACTURER_NAME,
@@ -1131,7 +1144,7 @@ bool SampleApplication::initialize(
         .withDisplayCategory(SAMPLE_ENDPOINT_DISPLAYCATEGORY);
 
 #ifdef POWER_CONTROLLER
-    auto discoballPowerHandler = PowerControllerHandler::create(SAMPLE_ENDPOINT_FRIENDLYNAME);
+    auto discoballPowerHandler = PowerControllerHandler::create(endpointId[0]);
     if (!discoballPowerHandler) {
         ACSDK_CRITICAL(LX("Failed to create power controller handler!"));
         return false;
@@ -1140,7 +1153,7 @@ bool SampleApplication::initialize(
 #endif
 
 #ifdef TOGGLE_CONTROLLER
-    auto discoballToggleHandler = ToggleControllerHandler::create(SAMPLE_ENDPOINT_FRIENDLYNAME);
+    auto discoballToggleHandler = ToggleControllerHandler::create(endpointId[0]);
     if (!discoballToggleHandler) {
         ACSDK_CRITICAL(LX("Failed to create toggle controller handler!"));
         return false;
@@ -1176,7 +1189,7 @@ bool SampleApplication::initialize(
 #endif
 
 #ifdef RANGE_CONTROLLER
-    auto discoballRangeHandler = RangeControllerHandler::create(SAMPLE_ENDPOINT_FRIENDLYNAME);
+    auto discoballRangeHandler = RangeControllerHandler::create(endpointId[0]);
     if (!discoballRangeHandler) {
         ACSDK_CRITICAL(LX("Failed to create range controller handler!"));
         return false;
@@ -1235,7 +1248,7 @@ bool SampleApplication::initialize(
 #endif
 
 #ifdef MODE_CONTROLLER
-    auto discoballModeHandler = ModeControllerHandler::create(SAMPLE_ENDPOINT_FRIENDLYNAME);
+    auto discoballModeHandler = ModeControllerHandler::create(endpointId[0]);
     if (!discoballModeHandler) {
         ACSDK_CRITICAL(LX("Failed to create mode controller handler!"));
         return false;
@@ -1247,7 +1260,7 @@ bool SampleApplication::initialize(
     }
 
     auto modeCapabilityResources = avsCommon::avs::CapabilityResources();
-    if (!modeCapabilityResources.addFriendlyNameWithText("Light", EN_US) ||
+    if (!modeCapabilityResources.addFriendlyNameWithText("Song", EN_US) ||
         !modeCapabilityResources.addFriendlyNameWithAssetId(avsCommon::avs::resources::ASSET_ALEXA_SETTING_MODE)) {
         ACSDK_CRITICAL(LX("Failed to create Mode Controller capability resources!"));
         return false;
