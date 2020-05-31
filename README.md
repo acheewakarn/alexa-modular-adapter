@@ -45,5 +45,10 @@ Working in collaboeration with the "Alexa for Everyone" Team @ Santa Cruz, CA
 3. Follow the above section from Step 5 to Step 7.
 4. You should now have the Alexa Modular Adapter App installed.
 
+### Steps to Setup and Run the Offline WiFi Voice Assistant
+1. Go to directory va.
+2. Run: ```pip install requirements```
+3. Then run this command: ```python3 mic_vad_streaming.py -m ./deepspeech-0.7.0-models.tflite ```
+
 ## Resources
 1. [AVS Device SDK Endpoints](https://developer.amazon.com/en-US/docs/alexa/avs-device-sdk/endpoints.html): This article goes through the four endpoints that are on the AVS Home Kit: ModeController, PowerController, RangeController, and ToggleController. Also discusses the device discoball that has the ModeController, PowerController, RangeController, and ToggleController already enabled to it.
