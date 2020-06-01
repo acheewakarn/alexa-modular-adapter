@@ -1,0 +1,20 @@
+{
+	"Table" : 
+	{
+		"ConnectionType" : "RJ45",
+		"CurrentRangeValue" : 27.899999999999999,
+		"FriendlyName" : "Table",
+		"LastConnected" : [ 46, 32, 12 ],
+		"LastModified" : [ 14, 35, 11 ],
+		"Pins" : [ 23, 24 ],
+		"Range" : [ 27.899999999999999, 46 ],
+		"isConnected" : "true"
+	},
+	"Toy" : 
+	{
+		"ConnectionType" : "Audiojack",
+		"FriendlyName" : "Toy",
+		"Pins" : [ 18 ],
+		"isConnected" : "true"
+	}
+}
