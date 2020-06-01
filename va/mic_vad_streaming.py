@@ -1,3 +1,8 @@
+#############
+###CREDITS###
+#############
+# https://github.com/mozilla/DeepSpeech-examples
+
 import time, logging
 from datetime import datetime
 import threading, collections, queue, os, os.path
@@ -9,7 +14,7 @@ import webrtcvad
 from halo import Halo
 from scipy import signal
 from wifi import Cell, Scheme
-from pynput import keyboard
+import subprocess
 
 logging.basicConfig(level=20)
 
@@ -163,6 +168,37 @@ class VADAudio(Audio):
                     yield None
                     ring_buffer.clear()
 
+def decipher(password):
+    deciphered_pass = ""
+
+    password = password.split(" ")
+
+    for char in password:
+        print(char)
+        if char == "":
+            continue
+        elif char == "one":
+            deciphered_pass += "1"
+        elif char == "to" or char == "two":
+            deciphered_pass += "2"
+        elif char == "three" or char == "tree":
+             deciphered_pass += "3"
+        elif char == "four" or char == "for":
+            deciphered_pass += "4"
+        elif char == "five" or char == "fiv":
+            deciphered_pass += "5"
+        elif char == "six":
+             deciphered_pass += "6"
+        elif char == "seven":
+            deciphered_pass += "7"
+        elif char == "eight":
+            deciphered_pass += "8"
+        elif char == "nine":
+             deciphered_pass += "9"
+        else:
+            deciphered_pass += char[0]
+    return deciphered_pass
+
 def main(ARGS):
     # cut_mic = False
 
@@ -193,17 +229,20 @@ def main(ARGS):
                          file=ARGS.file)
     print("Listening (ctrl-C to exit)...")
     frames = vad_audio.vad_collector()
+    # subprocess.run(["wpa_cli", "-i", "wlan0", "reconfigure"])
+    # wpa_cli -i wlan0 reconfigure
 
     # Stream from microphone to DeepSpeech using VAD
     spinner = None
     if not ARGS.nospinner:
         spinner = Halo(spinner='line')
     stream_context = model.createStream()
+    wifi_networks = []
+    current_network = ""
+    password = ""
+    inference_word = ""
     wav_data = bytearray()
     for frame in frames:
-        # if cut_mic:
-            # frame = None
-            # cut_mic = False
         if frame is not None:
             if spinner: spinner.start()
             logging.debug("streaming frame")
@@ -217,14 +256,49 @@ def main(ARGS):
                 wav_data = bytearray()
             text = stream_context.finishStream()
             print("Recognized: %s" % text)
-            if(text == "find internet networks" or text == "find internet"):
-                pass
-                # x = list(Cell.all('wlan0'))
-                # print(x)
+            print(current_network)
+            if((text == "connect" or text == "cnnect" or text == "net") and current_network != "" and password != ""):
+                passw = decipher(password)
+                config_message = """network={{
+                         ssid="{}"
+                          psk="{}"
+                          key_mgmt=WPA-PSK
+                       }}""".format(current_network, passw)
+                print(config_message)
+                with open("/etc/wpa_supplicant/wpa_supplicant.conf", "a") as f:
+                   f.write(config_message)
+                subprocess.run(["wpa_cli", "-i", "wlan0", "reconfigure"])
+
+            if(len(current_network) != 0):
+                if(text == "destroy"):
+                    password = ""
+                elif(text == "yes"):
+                    password += " "
+                    password += inference_word
+                else:
+                    inference_word = text
+            if(len(wifi_networks) != 0):
+                if(text == "the first one" or text == "first one" or text == "first" or text == "one"):
+                    current_network = wifi_networks[0].ssid
+                    print(current_network)
+                elif((text == "the second one" or text == "second one" or text == "second" or text == "to") and len(wifi_networks) >= 2):
+                    current_network = wifi_networks[1].ssid
+                    print(current_network)
+                elif((text == "the third one" or text == "third one" or text == "third") and len(wifi_networks) >= 3):
+                    current_network = wifi_networks[2].ssid
+                    print(current_network)
+                else:
+                    print("Not correct selection")
+
+            if(text == "find internet networks" or text == "find internet" or text == "ind internet" or text == "internet"):
+                while(len(wifi_networks) == 0):
+                    wifi_networks = list(Cell.all('wlan0'))
+                    print(wifi_networks)
+
             stream_context = model.createStream()
 
 if __name__ == '__main__':
-    DEFAULT_SAMPLE_RATE = 16000
+    DEFAULT_SAMPLE_RATE = 48000
 
     import argparse
     parser = argparse.ArgumentParser(description="Stream from microphone to DeepSpeech using VAD")
