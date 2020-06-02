@@ -51,7 +51,7 @@ Working in collaboeration with the "Alexa for Everyone" Team @ Santa Cruz, CA
 3. You may run into an issue with not having a library called libf77blas.so. If so run this command: ```sudo apt-get install libatlas-base-dev```.
 4. Then run this command: ```sudo -E python3 mic_vad_streaming.py -m ./deepspeech-0.7.0-models.tflite ```
 
-### Trouble Shooting for Offline WiFi Voice Assitant
+### Trouble Shooting for Offline WiFi Voice Assistant
 1. I have a problem where my program is always listening (i.e. the line on the command line is forever spinning).
    1. The solution that I found to this problem was the quality of my microphone. If you get this problem, it might be a sign for you to use a more upgraded microphone (i.e. ~$40). Sorry, given the sensitivity of the ```webrtcvad``` a small USB microphone will not cut it..
 2. I have an error where it is not saying that I have bad SAMPLE_RATE.
