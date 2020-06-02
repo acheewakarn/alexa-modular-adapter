@@ -174,7 +174,6 @@ def decipher(password):
     password = password.split(" ")
 
     for char in password:
-        print(char)
         if char == "":
             continue
         elif char == "one":
@@ -200,14 +199,6 @@ def decipher(password):
     return deciphered_pass
 
 def main(ARGS):
-    # cut_mic = False
-
-    # def on_press(key):
-        # print(cut_mic)
-        # cut_mic = True
-
-    # listener = keyboard.Listener(on_press=on_press)
-    # listener.start()
 
     # Load DeepSpeech model
     if os.path.isdir(ARGS.model):
@@ -256,15 +247,15 @@ def main(ARGS):
                 wav_data = bytearray()
             text = stream_context.finishStream()
             print("Recognized: %s" % text)
-            print(current_network)
-            if((text == "connect" or text == "cnnect" or text == "net") and current_network != "" and password != ""):
+            # print(current_network)
+            if((text == "connect" or text == "cnnect" or text == "net" or text == "that") and current_network != "" and password != ""):
                 passw = decipher(password)
                 config_message = """network={{
                          ssid="{}"
                           psk="{}"
                           key_mgmt=WPA-PSK
                        }}""".format(current_network, passw)
-                print(config_message)
+ #               print(config_message)
                 with open("/etc/wpa_supplicant/wpa_supplicant.conf", "a") as f:
                    f.write(config_message)
                 subprocess.run(["wpa_cli", "-i", "wlan0", "reconfigure"])
@@ -280,20 +271,23 @@ def main(ARGS):
             if(len(wifi_networks) != 0):
                 if(text == "the first one" or text == "first one" or text == "first" or text == "one"):
                     current_network = wifi_networks[0].ssid
-                    print(current_network)
+                    print("Selected Network: " + current_network)
                 elif((text == "the second one" or text == "second one" or text == "second" or text == "to") and len(wifi_networks) >= 2):
                     current_network = wifi_networks[1].ssid
-                    print(current_network)
+                    print("Selected Network: " + current_network)
                 elif((text == "the third one" or text == "third one" or text == "third") and len(wifi_networks) >= 3):
                     current_network = wifi_networks[2].ssid
-                    print(current_network)
+                    print("Selected Network: " + current_network)
                 else:
-                    print("Not correct selection")
+                    pass
+                    # print("Not correct selection")
 
             if(text == "find internet networks" or text == "find internet" or text == "ind internet" or text == "internet"):
                 while(len(wifi_networks) == 0):
                     wifi_networks = list(Cell.all('wlan0'))
-                    print(wifi_networks)
+                    print("Found these networks")
+                    for i in range(0, (len(wifi_networks) if len(wifi_networks) < 3 else 3)):
+                        print(str(i) + ".) " + wifi_networks[i].ssid)
 
             stream_context = model.createStream()
 
