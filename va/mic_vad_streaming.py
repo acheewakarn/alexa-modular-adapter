@@ -169,6 +169,10 @@ class VADAudio(Audio):
                     ring_buffer.clear()
 
 def decipher(password):
+    """This function takes a password full of words and
+    deciphers it into single letters (i.e. first letter of word)
+    or a number.
+    """
     deciphered_pass = ""
 
     password = password.split(" ")
@@ -198,6 +202,56 @@ def decipher(password):
             deciphered_pass += char[0]
     return deciphered_pass
 
+def connect_to_wifi(password, current_network):
+    """Connects the Modular Adapter to the Wifi
+    It does this by taking the "password" and
+    current_network (SSID) then deciphers the
+    password to get the correct letters and #'s
+    for the password. When that finishes it opens
+    the wpa_supplicant.conf file and writes the
+    SSID and password into it. Then it calls
+    the wpa_cli to reconnect to the wifi.
+    """
+
+    # This part takes the full password said by the client
+    # Then deciphers those words and numbers into actual
+    # individual letters and numbers.
+    # Example: red car one --> rc1
+    deciphered_password = decipher(password)
+
+    # This variable holds the message of the network's
+    # ssid and psk that is written to the wpa_supplicant.conf.
+    # One thing that I would recommend is to make the psk a hash
+    # than plain_text. This would make this part of the program
+    # much safer without having to trust root.
+    config_message = """network={{
+                        ssid="{}"
+                        psk="{}"
+                        key_mgmt=WPA-PSK
+                     }}""".format(current_network, deciphered_password)
+    with open("/etc/wpa_supplicant/wpa_supplicant.conf", "a") as f:
+        f.write(config_message)
+
+    # This process tells the RPI to reconnect to wlan0 again. This makes
+    # it possible to connect to the WiFI without having to reboot the
+    # entire RPI.
+    subprocess.run(["wpa_cli", "-i", "wlan0", "reconfigure"])
+
+def find_wifi_networks(wifi_networks):
+    """Looks for at most three local
+    WiFi networks that the RPI could
+    connect with. Then lists those
+    WiFi networks so the client
+    can see the available choices.
+    """
+    while(len(wifi_networks) == 0):
+        wifi_networks = list(Cell.all('wlan0'))
+        print("Found these networks")
+        for i in range(0, (len(wifi_networks) if len(wifi_networks) < 3 else 3)):
+            print(str(i) + ".) " + wifi_networks[i].ssid)
+        return wifi_networks
+
+
 def main(ARGS):
 
     # Load DeepSpeech model
@@ -220,8 +274,6 @@ def main(ARGS):
                          file=ARGS.file)
     print("Listening (ctrl-C to exit)...")
     frames = vad_audio.vad_collector()
-    # subprocess.run(["wpa_cli", "-i", "wlan0", "reconfigure"])
-    # wpa_cli -i wlan0 reconfigure
 
     # Stream from microphone to DeepSpeech using VAD
     spinner = None
@@ -233,13 +285,23 @@ def main(ARGS):
     password = ""
     inference_word = ""
     wav_data = bytearray()
+
+    # This for-loop is basically a while loop given 
+    # that frames is actually a generator that is constantly
+    # generating audio frames from the microphone.
     for frame in frames:
+        # If an audio frame is recorded as speech and not silence.
+        # The program adds the frame to the deepspeech streamer which
+        # is constantly collecting Audio frames to be recognized.
         if frame is not None:
             if spinner: spinner.start()
             logging.debug("streaming frame")
             stream_context.feedAudioContent(np.frombuffer(frame, np.int16))
             if ARGS.savewav: wav_data.extend(frame)
         else:
+            # Once the frame is no longer recognized as audio anymore,
+            # the deepspeech stream is finished where it takes all the audio
+            # that it has collected and returns the finished text version.
             if spinner: spinner.stop()
             logging.debug("end utterence")
             if ARGS.savewav:
@@ -247,19 +309,11 @@ def main(ARGS):
                 wav_data = bytearray()
             text = stream_context.finishStream()
             print("Recognized: %s" % text)
-            # print(current_network)
-            if((text == "connect" or text == "cnnect" or text == "net" or text == "that") and current_network != "" and password != ""):
-                passw = decipher(password)
-                config_message = """network={{
-                         ssid="{}"
-                          psk="{}"
-                          key_mgmt=WPA-PSK
-                       }}""".format(current_network, passw)
- #               print(config_message)
-                with open("/etc/wpa_supplicant/wpa_supplicant.conf", "a") as f:
-                   f.write(config_message)
-                subprocess.run(["wpa_cli", "-i", "wlan0", "reconfigure"])
 
+            # This makes gets the modular adapter to connect to a WiFi network given that the current_networ and password are atleast
+            # something.
+            if((text == "connect" or text == "cnnect" or text == "net" or text == "that") and current_network != "" and password != ""):
+                connect_to_wifi(password, current_network)
             if(len(current_network) != 0):
                 if(text == "destroy"):
                     password = ""
@@ -268,6 +322,7 @@ def main(ARGS):
                     password += inference_word
                 else:
                     inference_word = text
+            # This is where the user can actually select one of the three WiFi networks.
             if(len(wifi_networks) != 0):
                 if(text == "the first one" or text == "first one" or text == "first" or text == "one"):
                     current_network = wifi_networks[0].ssid
@@ -280,14 +335,11 @@ def main(ARGS):
                     print("Selected Network: " + current_network)
                 else:
                     pass
-                    # print("Not correct selection")
 
+
+            # This part of the program initiates the program. This is where the user prompts the device to find available networks.
             if(text == "find internet networks" or text == "find internet" or text == "ind internet" or text == "internet"):
-                while(len(wifi_networks) == 0):
-                    wifi_networks = list(Cell.all('wlan0'))
-                    print("Found these networks")
-                    for i in range(0, (len(wifi_networks) if len(wifi_networks) < 3 else 3)):
-                        print(str(i) + ".) " + wifi_networks[i].ssid)
+                 wifi_networks = find_wifi_networks(wifi_networks)
 
             stream_context = model.createStream()
 
